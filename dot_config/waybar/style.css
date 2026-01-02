@@ -1,0 +1,196 @@
+* {
+    font-family: "JetBrains Mono", "FiraCode Nerd Font", "Cantarell", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+window#waybar {
+    background-color: rgba(36, 31, 49, 0.95);
+    color: #f5c2e7;
+    border-bottom: 2px solid #eb6f92;
+}
+
+#custom-user {
+    padding: 0 16px;
+    margin-right: 8px;
+    color: #eb6f92;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgba(235, 111, 146, 0.2), rgba(235, 111, 146, 0.1));
+    border-radius: 12px;
+    border-left: 3px solid #eb6f92;
+}
+
+#tags button {
+    padding: 0 14px;
+    background-color: transparent;
+    color: #908caa;
+    border: none;
+    border-radius: 8px;
+    margin: 0 2px;
+    transition: all 0.3s ease;
+}
+
+#tags button.focused {
+    background: linear-gradient(135deg, #eb6f92, #c4a7e7);
+    color: #191724;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(235, 111, 146, 0.4);
+}
+
+#tags button.urgent {
+    background-color: #eb6f92;
+    color: #191724;
+    animation: pulse 1s ease-in-out infinite;
+}
+
+#tags button:hover {
+    background-color: rgba(235, 111, 146, 0.2);
+    color: #eb6f92;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+#window {
+    padding: 0 16px;
+    color: #f5c2e7;
+    font-weight: 600;
+    background: rgba(235, 111, 146, 0.1);
+    border-radius: 12px;
+    margin: 0 8px;
+}
+
+#clock {
+    padding: 0 20px;
+    color: #eb6f92;
+    font-weight: 700;
+    font-size: 14px;
+    background: linear-gradient(90deg, rgba(235, 111, 146, 0.15), rgba(196, 167, 231, 0.15));
+    border-radius: 12px;
+    border: 1px solid rgba(235, 111, 146, 0.3);
+}
+
+#idle_inhibitor,
+#pulseaudio,
+#backlight,
+#battery,
+#network {
+    padding: 0 14px;
+    margin: 0 3px;
+    background-color: rgba(49, 50, 68, 0.6);
+    border-radius: 10px;
+    border: 1px solid rgba(235, 111, 146, 0.2);
+    transition: all 0.3s ease;
+}
+
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#battery:hover,
+#network:hover {
+    background-color: rgba(235, 111, 146, 0.2);
+    border-color: #eb6f92;
+}
+
+#idle_inhibitor {
+    color: #f6c177;
+}
+
+#idle_inhibitor.activated {
+    color: #eb6f92;
+    background: linear-gradient(135deg, rgba(235, 111, 146, 0.3), rgba(246, 193, 119, 0.3));
+    border-color: #eb6f92;
+    box-shadow: 0 0 10px rgba(235, 111, 146, 0.4);
+}
+
+#pulseaudio {
+    color: #c4a7e7;
+}
+
+#pulseaudio.muted {
+    color: #6e6a86;
+}
+
+#backlight {
+    color: #f6c177;
+}
+
+#battery {
+    color: #9ccfd8;
+}
+
+#battery.charging {
+    color: #31748f;
+    background: linear-gradient(90deg, rgba(49, 116, 143, 0.2), rgba(156, 207, 216, 0.2));
+}
+
+#battery.warning:not(.charging) {
+    color: #f6c177;
+    background: rgba(246, 193, 119, 0.2);
+}
+
+#battery.critical:not(.charging) {
+    color: #eb6f92;
+    background: rgba(235, 111, 146, 0.3);
+    animation: blink 1s ease-in-out infinite;
+    border-color: #eb6f92;
+}
+
+@keyframes blink {
+    0% {
+        background: rgba(235, 111, 146, 0.3);
+        border-color: #eb6f92;
+    }
+    50% {
+        background: rgba(235, 111, 146, 0.6);
+        border-color: #eb6f92;
+        box-shadow: 0 0 15px rgba(235, 111, 146, 0.6);
+    }
+    100% {
+        background: rgba(235, 111, 146, 0.3);
+        border-color: #eb6f92;
+    }
+}
+
+/* Red */
+#network {
+    color: #c4a7e7;
+}
+
+#network.disconnected {
+    color: #eb6f92;
+    background: rgba(235, 111, 146, 0.2);
+}
+
+#tray {
+    padding: 0 10px;
+    background-color: rgba(49, 50, 68, 0.4);
+    border-radius: 10px;
+    border: 1px solid rgba(235, 111, 146, 0.2);
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb6f92;
+    border-radius: 8px;
+}
+
+tooltip {
+    background: rgba(25, 23, 36, 0.95);
+    border: 2px solid #eb6f92;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 4px 16px rgba(235, 111, 146, 0.3);
+}
+
+tooltip label {
+    color: #f5c2e7;
+    font-weight: 500;
+}

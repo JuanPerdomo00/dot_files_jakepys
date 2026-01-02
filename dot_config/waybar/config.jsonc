@@ -1,0 +1,98 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 8,
+    
+    "modules-left": [
+        "custom/user",
+        "river/tags",
+        "river/window"
+    ],
+    
+    "modules-center": [
+        "clock"
+    ],
+    
+    "modules-right": [
+        "idle_inhibitor",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "network",
+        "tray"
+    ],
+
+    "custom/user": {
+        "format": " {}",
+        "exec": "echo $USER",
+        "interval": "once",
+        "tooltip": false
+    },
+
+    "river/tags": {
+        "num-tags": 5,
+        "tag-labels": ["一", "二", "三", "四", "五"]
+    },
+
+    // Ventana actual
+    "river/window": {
+        "format": "{}",
+        "max-length": 50
+    },
+
+    // Reloj
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%d/%m/%Y}",
+        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰅶",
+            "deactivated": "󰾪"
+        },
+        "tooltip-format-activated": "Caffeine: ON (no se suspende)",
+        "tooltip-format-deactivated": "Caffeine: OFF (suspensión automática)"
+    },
+
+    // Audio
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰖁",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": ["󰃞", "󰃟", "󰃠"]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    "network": {
+        "format-wifi": "󰖩 {signalStrength}%",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰖪",
+        "tooltip-format": "{essid}\n{ipaddr}",
+        "on-click": "nm-connection-editor"
+    },
+
+    "tray": {
+        "spacing": 10
+    }
+}
