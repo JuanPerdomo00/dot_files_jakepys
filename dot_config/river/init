@@ -37,6 +37,8 @@ riverctl map normal Super Q close
 # Super+Shift+E to exit river
 riverctl map normal Super+Shift E exit
 
+# powermenu
+riverctl map normal Super O  spawn wlogout
 
 # Screenshots 
 riverctl map normal Super+Shift P spawn 'grim -g "$(slurp)" ~/Imágenes/jakepys-screenshot-$(date +%Y-%m-%d-%H-%M-%S).png'

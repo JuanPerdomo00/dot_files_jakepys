@@ -1,6 +1,7 @@
 #!/usr/bin/bash
 
 pkill -SIGTERM kanshi
+pkill -SIGTERM waybar
 
 riverctl spawn "kanshi &"
 riverctl spawn "waybar &"
