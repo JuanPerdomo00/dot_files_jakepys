@@ -1,3 +1,0 @@
-return {
-	"asm_lsp"
-}

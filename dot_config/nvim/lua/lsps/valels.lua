@@ -1,3 +1,0 @@
-return {
-	"vale_ls"
-}
