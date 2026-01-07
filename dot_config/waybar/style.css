@@ -1,196 +1,260 @@
+@define-color background #212121;
+@define-color background-light #3a3a3a;
+@define-color foreground #e0e0e0;
+@define-color black #5a5a5a;
+@define-color red #ff9a9e;
+@define-color green #b5e8a9;
+@define-color yellow #ffe6a7;
+@define-color blue #63a4ff;
+@define-color magenta #dda0dd;
+@define-color cyan #a3e8e8;
+@define-color white #ffffff;
+@define-color orange #ff8952;
+
+/* Module-specific colors */
+@define-color workspaces-color @foreground;
+@define-color workspaces-focused-bg @green;
+@define-color workspaces-focused-fg @cyan;
+@define-color workspaces-urgent-bg @red;
+@define-color workspaces-urgent-fg @black;
+
+/* Text and border colors for modules */
+@define-color mode-color @orange;
+@define-color group-hardware-color @blue;
+@define-color group-session-color @red;
+@define-color clock-color @blue;
+@define-color cpu-color @green;
+@define-color memory-color @magenta;
+@define-color temperature-color @yellow;
+@define-color temperature-critical-color @red;
+@define-color battery-color @cyan;
+@define-color battery-charging-color @green;
+@define-color battery-warning-color @yellow;
+@define-color battery-critical-color @red;
+@define-color network-color @blue;
+@define-color network-disconnected-color @red;
+@define-color pulseaudio-color @orange;
+@define-color pulseaudio-muted-color @red;
+@define-color wireplumber-color @orange;
+@define-color wireplumber-muted-color @red;
+@define-color backlight-color @yellow;
+@define-color disk-color @cyan;
+@define-color updates-color @orange;
+@define-color quote-color @green;
+@define-color idle-inhibitor-color @foreground;
+@define-color idle-inhibitor-active-color @red;
+@define-color power-profiles-daemon-color @cyan;
+@define-color power-profiles-daemon-performance-color @red;
+@define-color power-profiles-daemon-balanced-color @yellow;
+@define-color power-profiles-daemon-power-saver-color @green;
+
 * {
-    font-family: "JetBrains Mono", "FiraCode Nerd Font", "Cantarell", sans-serif;
-    font-size: 13px;
-    font-weight: 500;
+    /* Base styling for all modules */
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font Propo";
+    font-size: 14px;
+    min-height: 0;
 }
 
 window#waybar {
-    background-color: rgba(36, 31, 49, 0.95);
-    color: #f5c2e7;
-    border-bottom: 2px solid #eb6f92;
+    background-color: @background;
+    color: @foreground;
 }
 
-#custom-user {
-    padding: 0 16px;
-    margin-right: 8px;
-    color: #eb6f92;
-    font-weight: 700;
-    background: linear-gradient(90deg, rgba(235, 111, 146, 0.2), rgba(235, 111, 146, 0.1));
-    border-radius: 12px;
-    border-left: 3px solid #eb6f92;
-}
 
-#tags button {
-    padding: 0 14px;
-    background-color: transparent;
-    color: #908caa;
-    border: none;
-    border-radius: 8px;
+/* Common module styling with border-bottom */
+#mode,
+#custom-hardware-wrap,
+#custom-session-wrap,
+#clock,
+#cpu,
+#memory,
+#temperature,
+#battery,
+#network,
+#pulseaudio,
+#wireplumber,
+#backlight,
+#disk,
+#power-profiles-daemon,
+#idle_inhibitor,
+#tray {
+    padding: 0 10px;
     margin: 0 2px;
-    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    background-color: transparent;
 }
 
-#tags button.focused {
-    background: linear-gradient(135deg, #eb6f92, #c4a7e7);
-    color: #191724;
-    font-weight: 700;
-    box-shadow: 0 2px 8px rgba(235, 111, 146, 0.4);
+/* Workspaces styling */
+#workspaces button {
+    padding: 0 10px;
+    background-color: transparent;
+    color: @workspaces-color;
+    margin: 0;
 }
 
-#tags button.urgent {
-    background-color: #eb6f92;
-    color: #191724;
-    animation: pulse 1s ease-in-out infinite;
+#workspaces button:hover {
+    background: @background-light;
+    box-shadow: inherit;
 }
 
-#tags button:hover {
-    background-color: rgba(235, 111, 146, 0.2);
-    color: #eb6f92;
+#workspaces button.focused {
+    box-shadow: inset 0 -2px @workspaces-focused-fg;
+    color: @workspaces-focused-fg;
+    font-weight: 900;
 }
 
-@keyframes pulse {
-    0% { opacity: 1; }
-    50% { opacity: 0.7; }
-    100% { opacity: 1; }
+#workspaces button.urgent {
+    background-color: @workspaces-urgent-bg;
+    color: @workspaces-urgent-fg;
 }
 
-#window {
-    padding: 0 16px;
-    color: #f5c2e7;
-    font-weight: 600;
-    background: rgba(235, 111, 146, 0.1);
-    border-radius: 12px;
-    margin: 0 8px;
+/* Module-specific styling */
+#mode {
+    color: @mode-color;
+    border-bottom-color: @mode-color;
+}
+
+#custom-hardware-wrap {
+    color: @group-hardware-color;
+    border-bottom-color: @group-hardware-color;
+}
+
+#custom-session-wrap {
+    color: @group-session-color;
+    border-bottom-color: @group-session-color;
 }
 
 #clock {
-    padding: 0 20px;
-    color: #eb6f92;
-    font-weight: 700;
-    font-size: 14px;
-    background: linear-gradient(90deg, rgba(235, 111, 146, 0.15), rgba(196, 167, 231, 0.15));
-    border-radius: 12px;
-    border: 1px solid rgba(235, 111, 146, 0.3);
+    color: @clock-color;
+    border-bottom-color: @clock-color;
 }
 
-#idle_inhibitor,
-#pulseaudio,
-#backlight,
-#battery,
-#network {
-    padding: 0 14px;
-    margin: 0 3px;
-    background-color: rgba(49, 50, 68, 0.6);
-    border-radius: 10px;
-    border: 1px solid rgba(235, 111, 146, 0.2);
-    transition: all 0.3s ease;
+#cpu {
+    color: @cpu-color;
+    border-bottom-color: @cpu-color;
 }
 
-#idle_inhibitor:hover,
-#pulseaudio:hover,
-#backlight:hover,
-#battery:hover,
-#network:hover {
-    background-color: rgba(235, 111, 146, 0.2);
-    border-color: #eb6f92;
+#memory {
+    color: @memory-color;
+    border-bottom-color: @memory-color;
 }
 
-#idle_inhibitor {
-    color: #f6c177;
+#temperature {
+    color: @temperature-color;
+    border-bottom-color: @temperature-color;
 }
 
-#idle_inhibitor.activated {
-    color: #eb6f92;
-    background: linear-gradient(135deg, rgba(235, 111, 146, 0.3), rgba(246, 193, 119, 0.3));
-    border-color: #eb6f92;
-    box-shadow: 0 0 10px rgba(235, 111, 146, 0.4);
+#temperature.critical {
+    color: @temperature-critical-color;
+    border-bottom-color: @temperature-critical-color;
 }
 
-#pulseaudio {
-    color: #c4a7e7;
+
+#power-profiles-daemon {
+    color: @power-profiles-daemon-color;
+    border-bottom-color: @power-profiles-daemon-color;
 }
 
-#pulseaudio.muted {
-    color: #6e6a86;
+#power-profiles-daemon.performance {
+    color: @power-profiles-daemon-performance-color;
+    border-bottom-color: @power-profiles-daemon-performance-color;
 }
 
-#backlight {
-    color: #f6c177;
+#power-profiles-daemon.balanced {
+    color: @power-profiles-daemon-balanced-color;
+    border-bottom-color: @power-profiles-daemon-balanced-color;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @power-profiles-daemon-power-saver-color;
+    border-bottom-color: @power-profiles-daemon-power-saver-color;
 }
 
 #battery {
-    color: #9ccfd8;
+    color: @battery-color;
+    border-bottom-color: @battery-color;
 }
 
-#battery.charging {
-    color: #31748f;
-    background: linear-gradient(90deg, rgba(49, 116, 143, 0.2), rgba(156, 207, 216, 0.2));
+#battery.charging,
+#battery.plugged {
+    color: @battery-charging-color;
+    border-bottom-color: @battery-charging-color;
 }
 
 #battery.warning:not(.charging) {
-    color: #f6c177;
-    background: rgba(246, 193, 119, 0.2);
+    color: @battery-warning-color;
+    border-bottom-color: @battery-warning-color;
 }
 
 #battery.critical:not(.charging) {
-    color: #eb6f92;
-    background: rgba(235, 111, 146, 0.3);
-    animation: blink 1s ease-in-out infinite;
-    border-color: #eb6f92;
+    color: @battery-critical-color;
+    border-bottom-color: @battery-critical-color;
 }
 
-@keyframes blink {
-    0% {
-        background: rgba(235, 111, 146, 0.3);
-        border-color: #eb6f92;
-    }
-    50% {
-        background: rgba(235, 111, 146, 0.6);
-        border-color: #eb6f92;
-        box-shadow: 0 0 15px rgba(235, 111, 146, 0.6);
-    }
-    100% {
-        background: rgba(235, 111, 146, 0.3);
-        border-color: #eb6f92;
-    }
-}
-
-/* Red */
 #network {
-    color: #c4a7e7;
+    color: @network-color;
+    border-bottom-color: @network-color;
 }
 
 #network.disconnected {
-    color: #eb6f92;
-    background: rgba(235, 111, 146, 0.2);
+    color: @network-disconnected-color;
+    border-bottom-color: @network-disconnected-color;
+}
+
+#pulseaudio {
+    color: @pulseaudio-color;
+    border-bottom-color: @pulseaudio-color;
+}
+
+#pulseaudio.muted {
+    color: @pulseaudio-muted-color;
+    border-bottom-color: @pulseaudio-muted-color;
+}
+
+#wireplumber {
+    color: @wireplumber-color;
+    border-bottom-color: @wireplumber-color;
+}
+
+#wireplumber.muted {
+    color: @wireplumber-muted-color;
+    border-bottom-color: @wireplumber-muted-color;
+}
+
+#backlight {
+    color: @backlight-color;
+    border-bottom-color: @backlight-color;
+}
+
+#disk {
+    color: @disk-color;
+    border-bottom-color: @disk-color;
+}
+
+#idle_inhibitor {
+    color: @idle-inhibitor-color;
+    border-bottom-color: transparent;
+}
+
+#idle_inhibitor.activated {
+    color: @idle-inhibitor-active-color;
+    border-bottom-color: @idle-inhibitor-active-color;
 }
 
 #tray {
+    background-color: transparent;
     padding: 0 10px;
-    background-color: rgba(49, 50, 68, 0.4);
-    border-radius: 10px;
-    border: 1px solid rgba(235, 111, 146, 0.2);
+    margin: 0 2px;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
-    background-color: #eb6f92;
-    border-radius: 8px;
-}
-
-tooltip {
-    background: rgba(25, 23, 36, 0.95);
-    border: 2px solid #eb6f92;
-    border-radius: 12px;
-    padding: 8px;
-    box-shadow: 0 4px 16px rgba(235, 111, 146, 0.3);
-}
-
-tooltip label {
-    color: #f5c2e7;
-    font-weight: 500;
+    color: @red;
+    border-bottom-color: @red;
 }

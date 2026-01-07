@@ -1,0 +1,22 @@
+# Si tienes wallpaper
+image=$HOME/.config/wallpapers/arch_purple.jpg
+scaling=fill
+
+color=282a36cc
+
+ring-color=6272a4ff
+ring-ver-color=50fa7bff
+ring-wrong-color=ff5555ff
+
+inside-color=282a3699
+text-color=f8f8f2ff
+
+bs-hl-color=ff79c6ff
+key-hl-color=bd93f9ff
+
+effect-blur=7x5
+indicator
+indicator-radius=120
+indicator-thickness=12
+
+font="Iosevka Nerd Font"

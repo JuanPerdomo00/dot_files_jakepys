@@ -1,0 +1,288 @@
+format = """
+[$os$username$hostname](bold purple) $directory\
+$git_branch$git_status$git_state \
+$rust$python$nodejs$golang$java$php$ruby$c$cmake$dart$elixir$elm$erlang\
+$haskell$julia$kotlin$lua$nim$perl$scala$swift$zig$bun$deno$dotnet\
+$character"""
+
+palette = "dracula"
+
+[palettes.dracula]
+background = "#282a36"
+current_line = "#44475a"
+foreground = "#f8f8f2"
+comment = "#6272a4"
+cyan = "#8be9fd"
+green = "#50fa7b"
+orange = "#ffb86c"
+pink = "#ff79c6"
+purple = "#bd93f9"
+red = "#ff5555"
+yellow = "#f1fa8c"
+
+[os]
+format = '[$symbol](purple)'
+style = "purple"
+disabled = false
+
+[os.symbols]
+Arch = "󰣇 "
+Debian = " "
+Ubuntu = " "
+Fedora = " "
+Manjaro = " "
+Linux = " "
+Windows = "󰍲 "
+Macos = " "
+
+[username]
+style_user = "green"
+style_root = "red"
+format = "[$user](green)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = '[@$hostname](pink) '
+trim_at = "."
+disabled = false
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path](cyan)"
+style = "cyan"
+
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+
+[git_branch]
+format = "[$symbol$branch](purple) "
+symbol = " "
+style = "purple"
+truncation_length = 20
+truncation_symbol = "…"
+
+[git_status]
+format = "([\\[$all_status$ahead_behind\\]](yellow) )"
+style = "yellow"
+conflicted = "⚔️ "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+up_to_date = ""
+untracked = "?${count} "
+stashed = "📦 "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
+
+[git_commit]
+commit_hash_length = 7
+format = "[\\($hash$tag\\)](green) "
+style = "green"
+only_detached = true
+tag_symbol = " 🏷️ "
+tag_disabled = false
+
+[git_state]
+format = "[\\($state( $progress_current of $progress_total)\\)](red) "
+style = "red"
+rebase = "REBASING"
+merge = "MERGING"
+revert = "REVERTING"
+cherry_pick = "CHERRY-PICKING"
+bisect = "BISECTING"
+am = "AM"
+am_or_rebase = "AM/REBASE"
+
+[rust]
+format = '[$symbol($version)](red) '
+symbol = "󱘗 "
+style = "red"
+disabled = false
+detect_extensions = ["rs"]
+detect_files = ["Cargo.toml", "Cargo.lock"]
+
+[python]
+format = '[$symbol$pyenv_prefix($version)(\($virtualenv\))](yellow) '
+symbol = "󰌠 "
+style = "yellow"
+disabled = false
+detect_extensions = ["py"]
+detect_files = ["requirements.txt", "setup.py", "pyproject.toml", "Pipfile"]
+
+[nodejs]
+format = '[$symbol($version)](green) '
+symbol = "󰎙 "
+style = "green"
+disabled = false
+detect_extensions = ["js", "mjs", "cjs", "ts"]
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+
+[golang]
+format = '[$symbol($version)](cyan) '
+symbol = "󰟓 "
+style = "cyan"
+disabled = false
+detect_extensions = ["go"]
+detect_files = ["go.mod", "go.sum"]
+
+[java]
+format = '[$symbol($version)](red) '
+symbol = "󰬷 "
+style = "red"
+disabled = false
+detect_extensions = ["java", "class", "jar", "gradle", "clj", "cljc"]
+
+[php]
+format = '[$symbol($version)](purple) '
+symbol = "󰌟 "
+style = "purple"
+disabled = false
+detect_extensions = ["php"]
+detect_files = ["composer.json"]
+
+[ruby]
+format = '[$symbol($version)](red) '
+symbol = "󰴭 "
+style = "red"
+disabled = false
+detect_extensions = ["rb"]
+detect_files = ["Gemfile", ".ruby-version"]
+
+[c]
+format = '[$symbol($version)](cyan) '
+symbol = "󰙱 "
+style = "cyan"
+disabled = false
+detect_extensions = ["c", "h"]
+
+[cmake]
+format = '[$symbol($version)](cyan) '
+symbol = "󱁤 "
+style = "cyan"
+disabled = false
+detect_extensions = ["cmake"]
+detect_files = ["CMakeLists.txt", "CMakeCache.txt"]
+
+[dart]
+format = '[$symbol($version)](cyan) '
+symbol = "󰂚 "
+style = "cyan"
+disabled = false
+detect_extensions = ["dart"]
+detect_files = ["pubspec.yaml", "pubspec.yml", "pubspec.lock"]
+
+[elixir]
+format = '[$symbol($version)](purple) '
+symbol = " "
+style = "purple"
+disabled = false
+detect_extensions = ["ex", "exs"]
+detect_files = ["mix.exs"]
+
+[elm]
+format = '[$symbol($version)](cyan) '
+symbol = " "
+style = "cyan"
+disabled = false
+detect_extensions = ["elm"]
+detect_files = ["elm.json", "elm-package.json", ".elm-version"]
+
+[erlang]
+format = '[$symbol($version)](red) '
+symbol = " "
+style = "red"
+disabled = false
+detect_extensions = ["erl", "hrl"]
+
+[haskell]
+format = '[$symbol($version)](purple) '
+symbol = "󰲒 "
+style = "purple"
+disabled = false
+detect_extensions = ["hs", "lhs"]
+detect_files = ["stack.yaml", "cabal.project"]
+
+[julia]
+format = '[$symbol($version)](purple) '
+symbol = "󰘧 "
+style = "purple"
+disabled = false
+detect_extensions = ["jl"]
+detect_files = ["Project.toml", "Manifest.toml"]
+
+[kotlin]
+format = '[$symbol($version)](cyan) '
+symbol = "󱈙 "
+style = "cyan"
+disabled = false
+detect_extensions = ["kt", "kts"]
+
+[lua]
+format = '[$symbol($version)](cyan) '
+symbol = "󰢱 "
+style = "cyan"
+disabled = false
+detect_extensions = ["lua"]
+detect_files = [".lua-version"]
+
+[nim]
+format = '[$symbol($version)](yellow) '
+symbol = "󰆥 "
+style = "yellow"
+disabled = false
+detect_extensions = ["nim", "nims", "nimble"]
+
+[perl]
+format = '[$symbol($version)](cyan) '
+symbol = "󰌠 "
+style = "cyan"
+disabled = false
+detect_extensions = ["pl", "pm", "pod"]
+
+[scala]
+format = '[$symbol($version)](red) '
+symbol = " "
+style = "red"
+disabled = false
+detect_extensions = ["scala", "sc", "sbt"]
+
+[swift]
+format = '[$symbol($version)](orange) '
+symbol = "󰛥 "
+style = "orange"
+disabled = false
+detect_extensions = ["swift"]
+detect_files = ["Package.swift"]
+
+[zig]
+format = '[$symbol($version)](yellow) '
+symbol = "🦎"
+style = "yellow"
+disabled = false
+detect_extensions = ["zig"]
+
+[bun]
+format = '[$symbol($version)](red) '
+symbol = "󰳮 "
+style = "red"
+disabled = false
+
+[deno]
+format = '[$symbol($version)](green) '
+symbol = "󰛦 "
+style = "green"
+disabled = false
+detect_extensions = ["ts", "js"]
+detect_files = ["deno.json", "deno.jsonc"]
+
+[conda]
+format = '[$symbol$environment](green) '
+symbol = "󰔬 "
+style = "green"
+disabled = false
