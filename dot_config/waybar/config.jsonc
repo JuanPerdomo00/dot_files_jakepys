@@ -18,13 +18,13 @@
         "network",
         "battery",
         "group/session",
-        "tray",
+        "tray"
     ],
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": ""
+            "active": "1",
+            "default": "0"
         }
     },
     "niri/window": {
@@ -132,7 +132,7 @@
             "󱃃",
             "󰔏",
             "󱃂"
-        ],
+        ]
     },
     "battery": {
         "states": {
@@ -192,7 +192,7 @@
     "disk": {
         "interval": 30,
         "format": "󰋊 {percentage_used}%",
-        "path": "/",
+        "path": "/"
     },
     "tray": {
         "icon-size": 16,
@@ -208,5 +208,5 @@
             "balanced": "",
             "power-saver": ""
         }
-    },
+    }
 }
