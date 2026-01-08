@@ -288,6 +288,12 @@ window-rule {
     default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
+window-rule {
+    match app-id="^ghostty$"
+    open-floating true
+    default-column-width { proportion 0.6; }
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -305,6 +311,12 @@ window-rule {
 /-window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
+}
+
+window-rule {
+    match title="Arch-News"
+    open-floating true
+    default-column-width { proportion 0.6; }
 }
 
 binds {
@@ -327,7 +339,9 @@ binds {
     Super+A hotkey-overlay-title="Run an Application: roffi" { spawn "rofi" "-show" "drun"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
 		Super+Shift+Q { spawn "niri" "msg" "action" "quit"; }
-    // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
+		Super+N { spawn-sh "ghostty --title=Arch-News -e $HOME/.config/niri/scripts/run_anews.sh"; }
+
+		// Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
