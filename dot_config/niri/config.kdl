@@ -222,6 +222,12 @@ layout {
 spawn-at-startup "waybar"
 spawn-at-startup "swaybg" "-i" "/home/jakepys/.config/wallpapers/raiden.png" "-m" "fill"
 
+
+xwayland-satellite {
+    on
+    path "xwayland-satellite"
+}
+
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
