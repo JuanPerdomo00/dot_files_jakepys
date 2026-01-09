@@ -26,7 +26,7 @@ print_header() {
 
 install_tools() {
     print_header "Installing tools"
-    sudo pacman -S --needed --noconfirm xwayland-satellite dolphin swaybg nodejs npm curl git wget unzip base-devel python flameshot ghostty starship fastfetch zsh neovim rofi fzf lsd bat zip man tree pavucontrol blueman
+    sudo pacman -S --needed --noconfirm mako xwayland-satellite dolphin swaybg nodejs npm curl git wget unzip base-devel python flameshot ghostty starship fastfetch zsh neovim rofi fzf lsd bat zip man tree pavucontrol blueman
     print_success "Tools installed"
 }
 
@@ -81,6 +81,7 @@ create_symlinks() {
     link "$DOTFILES_DIR/dot_config/waybar" "$HOME/.config/waybar" "Waybar"
     link "$DOTFILES_DIR/dot_config/swaylock" "$HOME/.config/swaylock" "Swaylock"
     link "$DOTFILES_DIR/dot_config/flameshot" "$HOME/.config/flameshot" "Flameshot"
+    link "$DOTFILES_DIR/dot_config/mako" "$HOME/.config/mako" "mako"
     link "$DOTFILES_DIR/dot_config/starship.toml" "$HOME/.config/starship.toml" "Starship Config"
     link "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc" "Zsh"
     link "$DOTFILES_DIR/.alias_zsh" "$HOME/.alias_zsh" "Alias"
