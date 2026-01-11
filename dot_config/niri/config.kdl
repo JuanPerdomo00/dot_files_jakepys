@@ -339,6 +339,7 @@ binds {
     Super+T hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
     Super+A hotkey-overlay-title="Run an Application: roffi" { spawn "rofi" "-show" "drun"; }
     Super+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+    Super+Shift+F hotkey-overlay-title="Capture Screenshot: flameshot" { spawn "flameshot" "gui"; }
 		Super+Shift+Q { spawn "niri" "msg" "action" "quit"; }
 		Super+N { spawn-sh "ghostty --title=Arch-News -e $HOME/.config/niri/scripts/run_anews.sh"; }
 
