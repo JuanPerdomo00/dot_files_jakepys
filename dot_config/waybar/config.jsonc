@@ -5,7 +5,6 @@
     "spacing": 1,
     "margin": 0,
     "modules-left": [
-				"custom/arch-news",
         "group/hardware",
         "niri/workspaces",
         "niri/window"
@@ -14,13 +13,15 @@
         "clock"
     ],
     "modules-right": [
-        "wireplumber#sink",
-        "backlight",
-        "network",
-        "battery",
-        "group/session",
-        "tray"
-    ],
+			"custom/pacman_updates",
+			"custom/arch-news",
+			"wireplumber#sink",
+			"backlight",
+			"network",
+			"battery",
+			"group/session",
+			"tray"
+		],
     "niri/workspaces": {
         "format": "{icon}",
         "format-icons": {
@@ -29,7 +30,7 @@
         }
     },
     "niri/window": {
-    	"format": "<span color='#FFD700'>  {title}</span>",
+    	"format": "<span color='#FFD700'>   {title}</span>",
     	"rewrite": {
     		"(.*) - Mozilla Firefox": "🌎 $1",
     		"(.*) - zsh": "> [$1]"
@@ -97,6 +98,16 @@
         "on-click": "xdg-open https://archlinux.org/news/",
         "tooltip": true
     },
+		"custom/pacman_updates": {
+			"exec": "~/.config/waybar/scripts/pacman_updates.py",
+			"return-type": "json",
+			"interval": 3600,
+			"signal": 8,
+			"format": "<span color='#63a4ff'>󰏖 </span>",
+			"on-click": "ghostty -e sudo pacman -Syu",
+			"on-click-right": "~/.config/waybar/scripts/pacman_updates.py && pkill -RTMIN+8 waybar",
+			"tooltip": true
+		},
     "clock": {
         "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
         "format-alt": "󰥔 {:%H:%M}",

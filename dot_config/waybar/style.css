@@ -274,3 +274,42 @@ window#waybar {
 #custom-arch-news.arch-news-error {
     color: #e67e80;
 }
+
+#custom-pacman_updates {
+    padding: 0 10px;
+    margin: 0 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#custom-pacman_updates.updated {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
+#custom-pacman_updates.normal {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+    animation: pulse-soft 3s ease-in-out infinite;
+}
+
+#custom-pacman_updates.warning {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+    animation: pulse-medium 2s ease-in-out infinite;
+}
+
+#custom-pacman_updates.critical {
+    color: @red;
+    border-bottom: 2px solid @red;
+    animation: pulse-strong 1.5s ease-in-out infinite;
+}
+
+#custom-pacman_updates.error {
+    color: @red;
+    border-bottom: 2px solid @red;
+}
+
+#custom-pacman_updates:hover {
+    background: @background-light;
+}
