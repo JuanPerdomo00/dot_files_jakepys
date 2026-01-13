@@ -258,3 +258,19 @@ window#waybar {
     color: @red;
     border-bottom-color: @red;
 }
+
+#custom-arch-news {
+    padding: 0 8px;
+}
+
+#custom-arch-news.arch_news_active {
+    color: #a7c080;
+}
+
+#custom-arch-news.arch_news_inactive {
+    color: #7a8478;
+}
+
+#custom-arch-news.arch-news-error {
+    color: #e67e80;
+}

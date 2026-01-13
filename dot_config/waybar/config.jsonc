@@ -5,6 +5,7 @@
     "spacing": 1,
     "margin": 0,
     "modules-left": [
+				"custom/arch-news",
         "group/hardware",
         "niri/workspaces",
         "niri/window"
@@ -88,6 +89,14 @@
         "tooltip": true,
         "tooltip-format": "Power Off"
     },
+		"custom/arch-news": {
+        "format": "<span color='#63a4ff'>  </span>",
+        "return-type": "json",
+        "interval": 3600,
+        "exec": "~/.config/waybar/scripts/wanews.py 60 --active-color '#50fa7b' --inactive-color '#6272a4'",
+        "on-click": "xdg-open https://archlinux.org/news/",
+        "tooltip": true
+    },
     "clock": {
         "format": "󰥔 {:%H:%M 󰃮 %B %d, %Y}",
         "format-alt": "󰥔 {:%H:%M}",
@@ -159,7 +168,7 @@
         ]
     },
     "network": {
-        "format-wifi": "󰖩 {essid} ({signalStrength}%)",
+        "format-wifi": " 󰖩  {essid} ({signalStrength}%)",
         "format-ethernet": "󰈀 {ifname}",
         "format-linked": "󰈀 {ifname} (No IP)",
         "format-disconnected": "󰖪 Disconnected",
@@ -169,11 +178,11 @@
     },
     "wireplumber#sink": {
         "format": "{icon} {volume}%",
-        "format-muted": "",
+        "format-muted": "  ",
         "format-icons": [
-            "",
-            "",
-            ""
+            " ",
+            " ",
+            " "
         ],
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-down": "wpctl set-volume @DEFAULT_SINK@ 1%-",
@@ -182,9 +191,9 @@
     "backlight": {
         "format": "{icon} {percent}%",
         "format-icons": [
-            "󰃞",
-            "󰃟",
-            "󰃠"
+            "󰃞 ",
+            "󰃟 ",
+            "󰃠 "
         ],
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
