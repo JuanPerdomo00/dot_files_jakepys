@@ -31,6 +31,7 @@ return {
 					"zls",
 					"jsonls",
 					"bashls",
+					"nimls"
 				},
 				automatic_installation = false,
 			})

@@ -1,0 +1,209 @@
+{
+	"layer": "top",
+	"position": "top",
+	"height": 30,
+	"spacing": 1,
+	"margin": 0,
+	"modules-left": [
+		"sway/workspaces",
+		"custom/weather",
+		"custom/pacman_updates",
+		"custom/arch-news"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		"pulseaudio",
+		"backlight",
+		"network",
+		"cpu",
+		"memory",
+		"temperature",
+		"battery",
+		"disk",
+		"custom/uptime",
+		"tray"
+	],
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+		"format-icons": {
+			"1": " ",
+			"2": " ",
+			"3": " ",
+			"4": " ",
+			"5": "5",
+			"6": "6",
+			"7": "7",
+			"8": "8",
+			"9": "9"
+		},
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": []
+		}
+	},
+	"custom/weather": {
+		"exec": "curl 'https://wttr.in/?format=1'",
+		"interval": 3600,
+		"format": "{}",
+		"tooltip": true
+	},
+	"custom/pacman_updates": {
+		"exec": "~/.config/waybar/scripts/pacman_updates.py",
+		"return-type": "json",
+		"interval": 3600,
+		"signal": 8,
+		"format": "<span color='#63a4ff'> </span>",
+		"on-click": "ghostty -e sudo pacman -Syu",
+		"on-click-right": "~/.config/waybar/scripts/pacman_updates.py && pkill -RTMIN+8 waybar",
+		"tooltip": true
+	},
+	"custom/arch-news": {
+		"format": "<span color='#63a4ff'> </span>",
+		"return-type": "json",
+		"interval": 3600,
+		"exec": "~/.config/waybar/scripts/wanews.py 60 --active-color '#50fa7b' --inactive-color '#6272a4'",
+		"on-click": "xdg-open https://archlinux.org/news/",
+		"tooltip": true
+	},
+	"custom/uptime": {
+		"format": "󰔟 {}",
+		"exec": "uptime -p | sed 's/up //; s/ days/d/; s/ hours/h/; s/ minutes/m/'",
+		"interval": 60
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "󰈈",
+			"deactivated": "󰈉"
+		},
+		"tooltip": true
+	},
+	"clock": {
+		"format": "󰥔 {:%H:%M}",
+		"format-alt": "󰃮 {:%Y-%m-%d}",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"on-click-right": "mode",
+			"format": {
+				"months": "<span color='#d3c6aa'><b>{}</b></span>",
+				"days": "<span color='#e67e80'>{}</span>",
+				"weeks": "<span color='#a7c080'><b>W{}</b></span>",
+				"weekdays": "<span color='#7fbbb3'><b>{}</b></span>",
+				"today": "<span color='#dbbc7f'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		}
+	},
+	"cpu": {
+		"format": "󰘚 {usage}%",
+		"tooltip": true,
+		"interval": 1,
+		"on-click": "kitty -e htop"
+	},
+	"memory": {
+		"format": "󰍛 {}%",
+		"interval": 1,
+		"on-click": "kitty -e htop"
+	},
+	"temperature": {
+		"critical-threshold": 80,
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": [
+			"󱃃",
+			"󰔏",
+			"󱃂"
+		],
+		"on-click": "kitty -e s-tui"
+	},
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-charging": "󰂄 {capacity}%",
+		"format-plugged": "󰚥 {capacity}%",
+		"format-alt": "{icon} {time}",
+		"format-icons": [
+			"󰂎",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹"
+		]
+	},
+	"network": {
+		"format-wifi": "󰖩 {essid} ({signalStrength}%)",
+		"format-ethernet": "󰈀 {ifname}",
+		"format-linked": "󰈀 {ifname} (No IP)",
+		"format-disconnected": "󰖪 Disconnected",
+		"on-click": "ghostty -e nmtui"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "󰂰 {volume}%",
+		"format-bluetooth-muted": "󰂲 {icon}",
+		"format-muted": "󰝟",
+		"format-icons": {
+			"headphone": "󰋋",
+			"hands-free": "󰥰",
+			"headset": "󰋎",
+			"phone": "󰏲",
+			"portable": "󰄝",
+			"car": "󰄋",
+			"default": [
+				"󰕿",
+				"󰖀",
+				"󰕾"
+			]
+		},
+		"on-click": "pavucontrol",
+		"on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
+		"on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2%"
+	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": [
+			"󰃞",
+			"󰃟",
+			"󰃠"
+		],
+		"on-scroll-up": "brightnessctl set +5%",
+		"on-scroll-down": "brightnessctl set 5%-"
+	},
+	"disk": {
+		"interval": 30,
+		"format": "󰋊 {percentage_used}%",
+		"path": "/",
+		"on-click": "ghostty -e gdu /"
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 5
+	}
+}
