@@ -42,7 +42,7 @@ fi
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
 
 # PATH
-export PATH="$PATH:/home/Jakepys/.local/bin:/usr/local/go/bin:/home/Jakepys/.deno/bin:/home/Jakepys/go/bin"
+export PATH="$PATH:/home/Jakepys/.local/bin:/usr/local/go/bin:/home/Jakepys/.deno/bin:/home/Jakepys/go/bin/:/home/jakepys/.nimble/bin"
 #alias k=kubectl
 #compdef __start_kubectl k
 #"/home/Jakepys/.deno/env"
