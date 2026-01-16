@@ -26,7 +26,7 @@ print_header() {
 
 install_tools() {
     print_header "Installing tools"
-    sudo pacman -S --needed --noconfirm mako xwayland-satellite dolphin swaybg nodejs npm curl git wget unzip base-devel python flameshot ghostty starship fastfetch zsh neovim rofi fzf lsd bat zip man tree pavucontrol blueman
+    sudo pacman -S --needed --noconfirm s-tui gdu mako xwayland-satellite dolphin swaybg nodejs npm curl git wget unzip base-devel python flameshot ghostty starship fastfetch zsh neovim rofi fzf lsd bat zip man tree pavucontrol blueman
     print_success "Tools installed"
 }
 
