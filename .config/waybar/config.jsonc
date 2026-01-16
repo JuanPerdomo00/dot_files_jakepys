@@ -115,12 +115,12 @@
 		"format": "󰘚 {usage}%",
 		"tooltip": true,
 		"interval": 1,
-		"on-click": "kitty -e htop"
+		"on-click": "ghostty -e htop"
 	},
 	"memory": {
 		"format": "󰍛 {}%",
 		"interval": 1,
-		"on-click": "kitty -e htop"
+		"on-click": "ghostty -e htop"
 	},
 	"temperature": {
 		"critical-threshold": 80,
@@ -130,7 +130,7 @@
 			"󰔏",
 			"󱃂"
 		],
-		"on-click": "kitty -e s-tui"
+		"on-click": "ghostty -e s-tui"
 	},
 	"battery": {
 		"states": {
