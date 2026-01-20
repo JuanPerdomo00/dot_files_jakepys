@@ -6,7 +6,6 @@
 	"margin": 0,
 	"modules-left": [
 		"sway/workspaces",
-		"custom/weather",
 		"custom/pacman_updates",
 		"custom/arch-news"
 	],
@@ -47,12 +46,6 @@
 			"4": [],
 			"5": []
 		}
-	},
-	"custom/weather": {
-		"exec": "curl 'https://wttr.in/?format=1'",
-		"interval": 3600,
-		"format": "{}",
-		"tooltip": true
 	},
 	"custom/pacman_updates": {
 		"exec": "~/.config/waybar/scripts/pacman_updates.py",

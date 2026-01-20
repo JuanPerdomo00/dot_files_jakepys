@@ -108,7 +108,7 @@ window#waybar {
 
 
 /* Common module styling with border-bottom */
-#mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
+#mode, #mpd, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
 #idle_inhibitor, #tray {
@@ -157,11 +157,6 @@ window#waybar {
 #mpd.stopped {
     color: @foreground;
     border-bottom-color: transparent;
-}
-
-#custom-weather {
-    color: @weather-color;
-    border-bottom-color: @weather-color;
 }
 
 #custom-playerctl {
