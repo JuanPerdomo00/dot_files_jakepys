@@ -47,7 +47,8 @@ exec swayidle -w \
 #   }
 #
 input type:keyboard {
-	xkb_layout "us"
+	xkb_layout "us,es",
+	xkb_options "grp:win_space_toggle"
 }
 #
 # You can also configure each device individually.
