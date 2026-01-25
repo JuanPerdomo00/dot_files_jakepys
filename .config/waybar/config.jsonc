@@ -13,6 +13,7 @@
 		"clock"
 	],
 	"modules-right": [
+		"sway/language",
 		"pulseaudio",
 		"backlight",
 		"network",
@@ -46,6 +47,10 @@
 			"4": [],
 			"5": []
 		}
+	},
+	"sway/language": {
+		"format": "  {short}",
+		"on-click": "swaymsg input type:keyboard xkb_switch_layout next"
 	},
 	"custom/pacman_updates": {
 		"exec": "~/.config/waybar/scripts/pacman_updates.py",
