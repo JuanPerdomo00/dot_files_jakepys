@@ -1,0 +1,33 @@
+[user]
+	name = Juan Perdomo [Jakepy]
+	email = perdomojuan187@gmail.com
+	signingkey = 974DA1A3F556FBFF
+[core]
+	editor = nvim
+	autocrlf = input
+	compression = 9
+	whietespace = error
+	preloadindex = true
+[init]
+	defaultBranch = dev
+
+[status]
+	branch = true 
+	showStash = true
+	showUntrackedFiles = all
+
+[diff]
+	context = 3
+	renames = copies
+	interHunkContext = 10
+
+
+[commit]
+	template = ~/.config/git/template
+	verbose = true
+	gpgsign = true
+
+[alias]
+	lg = log --graph --oneline --pretty=format:'%h <%an> %s %Cgreen%d'
+	cmm = commit
+	s = status --short -b
