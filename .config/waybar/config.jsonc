@@ -26,7 +26,7 @@
 		"tray"
 	],
 	"sway/workspaces": {
-		"disable-scroll": true,
+		"disablescroll": true,
 		"all-outputs": true,
 		"format": "{icon}",
 		"format-icons": {
