@@ -102,9 +102,8 @@ create_symlinks() {
 	link "$DOTFILES_DIR/.config/sway" "$HOME/.config/sway" "Sway"
 	link "$DOTFILES_DIR/.config/git" "$HOME/.config/git" "Git"
 	link "$DOTFILES_DIR/.config/starship.toml" "$HOME/.config/starship.toml" "Starship Config"
-	link "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc" "Zsh"
-	link "$DOTFILES_DIR/.alias_zsh" "$HOME/.alias_zsh" "Alias"
-	link "$DOTFILES_DIR/.function_zsh" "$HOME/.function_zsh" "Functions"
+	link "$DOTFILES_DIR/.config/zsh" "$HOME/.config/zsh" "ZSH configs"
+	link "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc" "Zsh file"
 	link "$DOTFILES_DIR/wallpapers" "$HOME/.config/wallpapers" "Wallpapers"
 }
 
