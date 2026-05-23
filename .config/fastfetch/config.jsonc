@@ -1,61 +1,82 @@
 {
-	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-	"logo": {
-		"source": "arch_small",
-		"padding": {
-			"top": 2
-		}
-	},
-	"display": {
-		"separator": " "
-	},
-	"modules": [
-		{
-			"key": "╭──────────── SYSTEM",
-			"type": "custom"
-		},
-		{
-			"key": "├─ 󰌽 OS -> {#keys}",
-			"type": "os"
-		},
-		{
-			"key": "├─  DISPLAY -> {#keys}",
-			"type": "display"
-		},
-		{
-			"key": "├─ 󰇅 Host -> {#keys}",
-			"type": "title",
-			"format": "{host-name}"
-		},
-		{
-			"key": "├─ 󰍛 CPU -> {#keys}",
-			"type": "cpu",
-			"showPeCoreCount": true
-		},
-		{
-			"key": "╰─  RAM -> {#keys}",
-			"type": "memory"
-		},
-		{
-			"key": "╭──────────── USER",
-			"type": "custom"
-		},
-		{
-			"key": "├─  User -> {#keys}",
-			"type": "title",
-			"format": "{user-name}"
-		},
-		{
-			"key": "├─  Window Manager -> {#keys}",
-			"type": "wm"
-		},
-		{
-			"key": "├─  Terminal -> {#keys}",
-			"type": "terminal"
-		},
-		{
-			"key": "╰─  Shell -> {#keys}",
-			"type": "shell"
-		}
-	]
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "artix_small",
+    "color": {
+      "1": "38;2;122;162;247",
+      "2": "38;2;157;124;216"
+    },
+    "padding": {
+      "top": 1
+    }
+  },
+  "display": {
+    "separator": " ",
+    "color": {
+      "keys":   "38;2;122;162;247",
+      "title":  "38;2;192;202;245",
+      "output": "38;2;169;177;214"
+    }
+  },
+  "modules": [
+    {
+      "key": "╭──────────── SYSTEM",
+      "type": "custom"
+    },
+    {
+      "key": "├─  OS",
+      "type": "os"
+    },
+    {
+      "key": "├─ 󰍹  Display",
+      "type": "display"
+    },
+    {
+      "key": "├─ 󰒋  Host",
+      "type": "title",
+      "format": "{host-name}"
+    },
+    {
+      "key": "├─ 󰍛  CPU",
+      "type": "cpu",
+      "showPeCoreCount": true
+    },
+    {
+      "key": "├─ 󰘚  GPU",
+      "type": "gpu"
+    },
+    {
+      "key": "├─ 󱡨  Kernel",
+      "type": "kernel"
+    },
+    {
+      "key": "╰─ 󰍜  RAM",
+      "type": "memory"
+    },
+    {
+      "key": "╭──────────── USER",
+      "type": "custom"
+    },
+    {
+      "key": "├─ 󰀄  User",
+      "type": "title",
+      "format": "{user-name}"
+    },
+    {
+      "key": "├─ 󱂬  WM",
+      "type": "wm"
+    },
+    {
+      "key": "├─   Terminal",
+      "type": "terminal"
+    },
+    {
+      "key": "├─   Shell",
+      "type": "shell"
+    },
+    {
+      "key": "╰─ 󰅐  Uptime",
+      "type": "uptime"
+    }
+  ]
 }
