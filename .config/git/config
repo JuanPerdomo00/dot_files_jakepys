@@ -1,7 +1,6 @@
 [user]
 	name = Juan Perdomo [Jakepy]
 	email = perdomojuan187@gmail.com
-	signingkey = 974DA1A3F556FBFF
 [core]
 	editor = nvim
 	autocrlf = input
@@ -25,7 +24,7 @@
 [commit]
 	template = ~/.config/git/template
 	verbose = true
-	gpgsign = true
+	gpgsign = false
 
 [alias]
 	lg = log --graph --oneline --pretty=format:'%h <%an> %s %Cgreen%d'
