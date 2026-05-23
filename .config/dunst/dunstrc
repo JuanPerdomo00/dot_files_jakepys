@@ -3,7 +3,7 @@
     corner_radius = 8
     frame_width = 1
     gap_size = 8
-    offset = 10x10
+    offset = (10, 10)
 
 [urgency_normal]
     background = "#1a1b26"
