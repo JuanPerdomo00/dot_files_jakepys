@@ -12,3 +12,5 @@ _load "$ZSH_CFG/prompt.zsh"
 
 FZF_ALT_C_COMMAND= source <(fzf --zsh)
 [ -s "/home/jakepys/.bun/_bun" ] && source "/home/jakepys/.bun/_bun"
+
+source /home/jakepys/.config/broot/launcher/bash/br

@@ -36,6 +36,7 @@ gaps inner 8
 exec --no-startup-id dex --autostart --environment i3
 exec_always ~/.config/polybar/launch.sh
 exec_always --no-startup-id dunst
+exec_always --no-startup-id export QT_QPA_PLATFORMTHEME=qt5ct
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
