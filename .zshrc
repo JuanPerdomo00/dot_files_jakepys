@@ -6,7 +6,7 @@ _load() { [[ -f "$1" ]] && source "$1" }
 
 _load "$ZSH_CFG/plugins.zsh"
 _load "$ZSH_CFG/exports.zsh"
-_load "$ZSH_CFG/aliases.zsh"
+_load "$ZSH_CFG/alias.zsh"
 _load "$ZSH_CFG/functions.zsh"
 _load "$ZSH_CFG/prompt.zsh"
 
