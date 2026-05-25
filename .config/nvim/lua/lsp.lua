@@ -22,6 +22,7 @@ vim.lsp.config("lua_ls", {
 
 
 vim.lsp.enable({
+    "rust_analyzer",
     "lua_ls",
     "dockerls",
     "zls",
