@@ -7,5 +7,6 @@ require("pack")
 require("treesitter")
 require("lsp")
 require("dashboard")
+require("dc")
 
 vim.cmd.colorscheme("kanagawa-dragon")
