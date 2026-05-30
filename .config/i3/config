@@ -36,7 +36,7 @@ gaps inner 8
 exec --no-startup-id dex --autostart --environment i3
 exec_always ~/.config/polybar/launch.sh
 exec --no-startup-id picom --daemon
-exec_always --no-startup-id pkill xgifwallpaper; sleep 2 && xgifwallpaper -s FILL ~/dot_files_jakepys/wallpapers/gifs/lain.gif
+#exec_always --no-startup-id pkill xgifwallpaper; sleep 2 && xgifwallpaper -s FILL ~/dot_files_jakepys/wallpapers/gifs/lain.gif
 exec_always --no-startup-id dunst
 exec_always --no-startup-id export QT_QPA_PLATFORMTHEME=qt5ct
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
@@ -70,7 +70,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+t exec ghostty
+bindsym $mod+t exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -88,7 +88,7 @@ bindsym $mod+d exec --no-startup-id rofi -show drun
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # always 
-#exec_always --no-startup-id feh --bg-fill /home/jakepys/dot_files_jakepys/wallpapers/yuta.jpg
+exec_always --no-startup-id feh --bg-fill /home/jakepys/dot_files_jakepys/wallpapers/lain.jpg
 
 # change focus
 bindsym $mod+j focus left
