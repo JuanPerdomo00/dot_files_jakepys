@@ -16,8 +16,29 @@
 import subprocess
 
 def main():
-    result = subprocess.run(["checkupdates"], capture_output=True, text=True)
-    print(len(result.stdout.splitlines()))
+    vpn = subprocess.run(
+        ["nmcli", "connection", "show", "--active"],
+        capture_output=True, text=True
+    )
+
+    for line in vpn.stdout.splitlines():
+        if "vpn" in line:
+            name = line.split()[1]
+            print(f"{name}")
+            return
+
+    wifi = subprocess.run(
+        ["nmcli", "-t", "-f", "active,ssid", "dev", "wifi"],
+        capture_output=True, text=True
+    )
+
+    for line in wifi.stdout.splitlines():
+        if line.startswith("yes:"):
+            ssid = line.split(":")[1]
+            print(f"󰤨 {ssid}")
+            return
+
+    print("󰤭 no network")
 
 if __name__ == "__main__":
     main()
