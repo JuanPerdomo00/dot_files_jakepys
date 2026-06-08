@@ -15,9 +15,17 @@
 
 import subprocess
 
+
 def main():
     result = subprocess.run(["checkupdates"], capture_output=True, text=True)
-    print(len(result.stdout.splitlines()))
+    print(
+        len(result.stdout.splitlines())
+        if result.returncode == 0
+        else 0
+        if result.returncode == 2
+        else "err"
+    )
+
 
 if __name__ == "__main__":
     main()
