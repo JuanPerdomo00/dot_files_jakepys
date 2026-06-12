@@ -17,13 +17,15 @@ import subprocess
 
 
 def main():
-    result = subprocess.run(["checkupdates"], capture_output=True, text=True)
+    result_pacman_updates = subprocess.run(
+        ["checkupdates"], capture_output=True, text=True
+    )
+    result_aur_updates = subprocess.run(
+        ["paru", "-Qua"], capture_output=True, text=True
+    )
     print(
-        len(result.stdout.splitlines())
-        if result.returncode == 0
-        else 0
-        if result.returncode == 2
-        else "err"
+        f"󰮯 -> {len(result_pacman_updates.stdout.splitlines()) if result_pacman_updates.returncode == 0 else 0} "
+        f" -> {len(result_aur_updates.stdout.splitlines()) if result_aur_updates.returncode == 0 else 0}"
     )
 
 
