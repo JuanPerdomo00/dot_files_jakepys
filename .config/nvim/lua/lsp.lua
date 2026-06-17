@@ -35,4 +35,5 @@ vim.lsp.enable({
     "gopls",
     "clangd",
     "pyright",
+    "bashls"
 })
