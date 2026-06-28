@@ -1,0 +1,6 @@
+require("plugins.pack")
+require("plugins.mini")
+require("plugins.lsp")
+require("plugins.treesitter")
+require("plugins.icons")
+require("plugins.dc")

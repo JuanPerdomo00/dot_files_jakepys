@@ -1,0 +1,5 @@
+require("jakepys.options")
+require("jakepys.keymaps")
+require("jakepys.commands")
+require("jakepys.floatterm")
+require("jakepys.dashboard")

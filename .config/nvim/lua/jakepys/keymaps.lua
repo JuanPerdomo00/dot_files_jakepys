@@ -1,5 +1,3 @@
-vim.g.mapleader = " "
-
 vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>", { desc = "Restart config :restart)" })
 
 vim.keymap.set("x", "p", [["_dP]], { desc = "Paste over selection without losing yanked text" })
@@ -29,7 +27,7 @@ vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc =
 
 
 vim.keymap.set({ "n", "t" }, "<space>tt", function()
-    require("floatterm").toggle_terminal()
+    require("jakepys.floatterm").toggle_terminal()
 end, { desc = "Toggle floating terminal" })
 
 -- native undotree

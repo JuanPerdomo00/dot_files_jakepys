@@ -1,12 +1,8 @@
 require("vim._core.ui2").enable({})
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require("options")
-require("keymaps")
-require("commands")
-require("pack")
-require("treesitter")
-require("lsp")
-require("dashboard")
-require("dc")
+require("plugins")
+require("jakepys")
 
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme("melange")
