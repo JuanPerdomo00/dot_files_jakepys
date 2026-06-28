@@ -76,3 +76,31 @@ MiniSnippets.setup({
 })
 
 MiniSnippets.start_lsp_server({ match = false })
+
+--- mini statusline ---
+local MiniStatusline = require("mini.statusline")
+MiniStatusline.setup({
+    use_icons = true,
+})
+
+MiniStatusline.section_location = function()
+    return "%2l:%-2v"
+end
+
+require("mini.indentscope").setup({
+    symbol = "│",
+    options = {
+        try_as_border = true,
+    },
+    draw = {
+        delay = 50,
+        animation = require("mini.indentscope").gen_animation.none(),
+    },
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "dashboard", "help", "lazy", "mason", "notify", "toggleterm" },
+    callback = function()
+        vim.b.miniindentscope_disable = true
+    end,
+})
