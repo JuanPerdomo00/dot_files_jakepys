@@ -22,7 +22,6 @@ vim.lsp.config("lua_ls", {
 
 
 vim.lsp.enable({
-    "serve_d",
     "gleam",
     "ols",
     "rust_analyzer",
