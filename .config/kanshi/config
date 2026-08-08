@@ -1,0 +1,9 @@
+profile "docked" {
+    output eDP-1 disable
+    output HDMI-A-1 enable mode 1920x1080@60 position 0,0
+}
+
+profile "laptop" {
+    output eDP-1 enable mode 1366x768@60 position 0,0
+    output HDMI-A-1 disable
+}
