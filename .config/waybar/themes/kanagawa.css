@@ -1,0 +1,170 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Iosevka Nerd Font", monospace;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+#waybar {
+    background: @mantle;
+    border-radius: 14px;
+    border: 2px solid @surface2;
+    margin: 6px 8px;
+}
+
+/* Workspaces */
+#workspaces {
+    background: @bg-workspaces;
+    border-radius: 12px;
+    margin: 4px 4px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    color: @subtext0;
+    background: transparent;
+    border-radius: 10px;
+    padding: 0 8px;
+    margin: 3px 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @text;
+}
+
+#workspaces button.active {
+    background: @mauve;
+    color: @crust;
+    box-shadow: 0 0 8px @mauve;
+}
+
+#workspaces button.urgent {
+    background: @red;
+    color: @crust;
+}
+
+/* Base module styling */
+#clock,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#tray,
+#custom-launcher,
+#custom-power,
+#temperature,
+#backlight {
+    background: @bg-system;
+    color: @text;
+    border-radius: 12px;
+    padding: 0 12px;
+    margin: 4px 3px;
+}
+
+/* Clock: destacado */
+#clock {
+    background: @bg-clock;
+    color: @crust;
+    font-weight: bold;
+    box-shadow: 0 0 6px alpha(@bg-clock, 0.5);
+}
+
+/* Launcher */
+#custom-launcher {
+    background: @bg-launcher;
+    color: @crust;
+    font-size: 16px;
+    padding: 0 14px;
+    box-shadow: 0 0 6px alpha(@bg-launcher, 0.5);
+}
+
+/* Power */
+#custom-power {
+    background: @bg-power;
+    color: @crust;
+    padding: 0 12px;
+}
+
+#custom-power:hover {
+    background: @maroon;
+}
+
+/* Network */
+#network {
+    color: @sky;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+/* Audio */
+#pulseaudio {
+    color: @teal;
+}
+
+#pulseaudio.muted {
+    color: @overlay1;
+}
+
+/* CPU / Memory */
+#cpu {
+    color: @peach;
+}
+
+#memory {
+    color: @lavender;
+}
+
+/* Battery */
+#battery {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    to {
+        color: @text;
+        background: @red;
+    }
+}
+
+/* Tray */
+#tray {
+    background: @surface0;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background: @maroon;
+}
+
+/* Tooltip */
+tooltip {
+    background: @mantle;
+    border: 1px solid @overlay0;
+    border-radius: 10px;
+}
+
+tooltip label {
+    color: @text;
+}

@@ -1,0 +1,60 @@
+/*
+* Dark Pink palette
+*/
+
+/* Base colors */
+@define-color base   #1a1420;
+@define-color mantle #120e17;
+@define-color crust  #0a070d;
+
+/* Text colors */
+@define-color text     #f2d9e6;
+@define-color subtext0 #b892a8;
+@define-color subtext1 #d9b8cb;
+
+/* Surface colors */
+@define-color surface0 #2b1f2e;
+@define-color surface1 #3a2a3f;
+@define-color surface2 #4d3654;
+
+/* Overlay colors */
+@define-color overlay0 #6e4d6f;
+@define-color overlay1 #8f6389;
+@define-color overlay2 #a97fa0;
+
+/* Accent colors */
+@define-color blue      #7fc8e0;
+@define-color lavender  #c9a8e0;
+@define-color sapphire  #7fb4ca;
+@define-color sky       #7dc4e4;
+@define-color teal      #7fe0c4;
+@define-color green     #7fe0a0;
+@define-color yellow    #f0c987;
+@define-color peach     #ff9f7a;
+@define-color maroon    #ff4d6d;
+@define-color red       #ff2e5b;
+@define-color mauve     #c48ce0;
+@define-color pink      #ff6ec7;
+@define-color flamingo  #ff8fb3;
+@define-color rosewater #f2d9e6;
+
+/* Additional styling variables */
+@define-color background-primary   #1a1420;
+@define-color background-secondary #2b1f2e;
+@define-color background-hover     #3a2a3f;
+@define-color border-color         #8f6389;
+
+/* Status colors */
+@define-color success @green;
+@define-color warning @yellow;
+@define-color error   @red;
+@define-color info    @blue;
+
+/* Module-specific background colors */
+@define-color bg-workspaces #2b1f2e;
+@define-color bg-clock      #ff2e9a;
+@define-color bg-system     #3a2a3f;
+@define-color bg-network    #3a2a3f;
+@define-color bg-audio      #3a2a3f;
+@define-color bg-launcher   #c48ce0;
+@define-color bg-power      #ff4d6d;
