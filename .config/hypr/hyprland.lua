@@ -1,0 +1,15 @@
+package.path = package.path .. ";" .. os.getenv("HOME") .. "/.config/hypr/lua/?.lua"
+
+require("monitors")
+require("programs")
+require("autostart")
+require("env")
+-- require("permissions")
+require("lookandfeel")
+require("animations")
+require("layouts")
+require("misc")
+require("input")
+require("keybindings")
+require("windowrules")
+require("screens")
