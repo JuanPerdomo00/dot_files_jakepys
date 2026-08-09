@@ -1,6 +1,10 @@
 vim.pack.add({
     "https://github.com/goolord/alpha-nvim",
+    -- Colors ------------------------------------------
     "https://github.com/rebelot/kanagawa.nvim",
+    "https://github.com/rockerBOO/boo-colorscheme-nvim",
+    "https://github.com/srcery-colors/srcery-vim",
+    -----------------------------------------------------
     "https://github.com/nvim-mini/mini.nvim",
     "https://github.com/rafamadriz/friendly-snippets",
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
