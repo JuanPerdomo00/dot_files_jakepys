@@ -11,30 +11,22 @@ capabilities = vim.tbl_deep_extend("force", capabilities, require("mini.completi
 
 vim.lsp.config("*", { capabilities = capabilities })
 
+local servers_configs = {
+    emmylua_ls = "plugins.lsps_langs.lua_lang_config",
+    pyright = "plugins.lsps_langs.python_lang_config",
+    ts_ls = "plugins.lsps_langs.typescript_lang_config",
+    dockerls = "plugins.lsps_langs.docker_lang_config",
+    rust_analyzer = "plugins.lsps_langs.rust_lang_config",
+    html = "plugins.lsps_langs.html_lang_config",
+    jsonls = "plugins.lsps_langs.json_lang_config",
+    cssls = "plugins.lsps_langs.css_lang_config",
+    bashls = "plugins.lsps_langs.bash_lang_config",
+    clangd = "plugins.lsps_langs.c_lang_config",
+    gopls = "plugins.lsps_langs.go_lang_config"
+}
 
-vim.lsp.config("lua_ls", {
-    settings = {
-        Lua = {
-            diagnostics = { globals = { "vim" } },
-        },
-    },
-})
+for name_lsp, module_path in pairs(servers_configs) do
+    vim.lsp.config(name_lsp, require(module_path))
+end
 
-
-vim.lsp.enable({
-    "gleam",
-    "ols",
-    "rust_analyzer",
-    "lua_ls",
-    "dockerls",
-    "zls",
-    "html",
-    "jsonls",
-    "cssls",
-    "ts_ls",
-    "bashls",
-    "gopls",
-    "clangd",
-    "pyright",
-    "bashls"
-})
+vim.lsp.enable(vim.tbl_keys(servers_configs))
