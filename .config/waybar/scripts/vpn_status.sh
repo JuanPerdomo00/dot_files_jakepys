@@ -23,7 +23,7 @@ toggle_vpn() {
             notify-send -u critical "VPN Error" "Failed to disconnect"
         fi
     else
-        if protonvpn connect --fastest >/dev/null 2>&1; then
+        if protonvpn connect >/dev/null 2>&1; then
             notify-send -u normal "VPN Connected" "Proton VPN session started"
         else
             notify-send -u critical "VPN Error" "Failed to connect"
