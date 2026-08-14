@@ -24,7 +24,7 @@ hl.bind(mainMod .. " + up",    hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down",  hl.dsp.focus({ direction = "down" }))
 
 -- Capture Screen
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd("hyprshot -m region"))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.exec_cmd("hyprshot -m region --clipboard-only"))
 
 -- Move workspace
 for i = 1, 10 do
