@@ -10,7 +10,6 @@ $os\
 $username$hostname\
 $directory\
 ${custom.giturl}\
-${custom.d}\
 $git_branch\
 ${custom.git_worktree}\
 $git_status\
@@ -78,12 +77,6 @@ disabled = true
 time_format = "%R"
 format = "[[  $time ](fg:yellow bg:foam)]($style)"
 
-[custom.d]
-detect_extensions = ["d"]
-symbol = " "
-format = "[ $symbol($output )]($style)"
-command = "dmd --version | head -n1 | grep -oP 'v\\d+\\.\\d+\\.\\d+'"
-style = "bold red"
 
 [custom.giturl]
 description = "Display symbol for remote Git server"
