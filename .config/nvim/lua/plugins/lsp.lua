@@ -23,6 +23,7 @@ local servers_configs = {
     bashls = "plugins.lsps_langs.bash_lang_config",
     clangd = "plugins.lsps_langs.c_lang_config",
     gopls = "plugins.lsps_langs.go_lang_config",
+    zls = "plugins.lsps_langs.zig_lang_config",
 }
 
 for name_lsp, module_path in pairs(servers_configs) do
