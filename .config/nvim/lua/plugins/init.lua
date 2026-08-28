@@ -1,6 +1,7 @@
 require("plugins.pack")
 require("plugins.mini")
 require("plugins.lsp")
+require("plugins.conform")
 require("plugins.treesitter")
 require("plugins.gitsigns")
 require("plugins.icons")
