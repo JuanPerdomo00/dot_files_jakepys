@@ -16,5 +16,11 @@ vim.pack.add({
     "https://github.com/lewis6991/gitsigns.nvim",
     "https://github.com/hrsh7th/nvim-cmp",
     "https://github.com/3rd/image.nvim",
-    "https://github.com/stevearc/conform.nvim"
+    "https://github.com/stevearc/conform.nvim",
+
+    -- Git ------------------------------------------
+    "https://github.com/nvim-lua/plenary.nvim",
+    "https://github.com/NeogitOrg/neogit",
+    "https://github.com/sindrets/diffview.nvim"
+    -----------------------------------------------------
 })
