@@ -3,7 +3,7 @@ return {
     settings = {
         emmylua = {
             runtime = { version = "LuaJIT" },
-            diagnostics = { globals = { "vim" } },
+            diagnostics = { globals = { "vim", "hl" } },
             workspace = {
                 library = {
                     vim.env.VIMRUNTIME,
