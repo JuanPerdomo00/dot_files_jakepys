@@ -1,7 +1,10 @@
 require("mason").setup()
 
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to definition" })
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format Local buffer" })
+vim.keymap.set("n", "<leader>f", function ()
+    require("conform").format({ lsp_format = "fallback" })
+end, { desc = "Format Local buffer" }
+)
 vim.keymap.set("n", "df", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
 
 vim.diagnostic.config({ virtual_text = true })
@@ -14,6 +17,7 @@ vim.lsp.config("*", { capabilities = capabilities })
 local servers_configs = {
     emmylua_ls = "plugins.lsps_langs.lua_lang_config",
     pyright = "plugins.lsps_langs.python_lang_config",
+    ruff = "plugins.lsps_langs.ruff_formater_config",
     ts_ls = "plugins.lsps_langs.typescript_lang_config",
     dockerls = "plugins.lsps_langs.docker_lang_config",
     rust_analyzer = "plugins.lsps_langs.rust_lang_config",
@@ -24,6 +28,7 @@ local servers_configs = {
     clangd = "plugins.lsps_langs.c_lang_config",
     gopls = "plugins.lsps_langs.go_lang_config",
     zls = "plugins.lsps_langs.zig_lang_config",
+    ols = "plugins.lsps_langs.odin_lang_config"
 }
 
 for name_lsp, module_path in pairs(servers_configs) do
