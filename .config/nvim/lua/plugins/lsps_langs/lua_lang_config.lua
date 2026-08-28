@@ -9,6 +9,9 @@ return {
                     vim.env.VIMRUNTIME,
                     vim.api.nvim_get_runtime_file("lua/lspconfig", false)[1]
                 }
+            },
+            reformat = {
+                enable = true
             }
         }
     }
