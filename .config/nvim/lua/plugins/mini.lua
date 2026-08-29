@@ -104,6 +104,20 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 })
 
+--- mini hipatterns ---
+require("mini.hipatterns").setup({
+    highlighters = {
+        fixme = { pattern = "%f[%w]()FIXME()%f[%W]", group = "MiniHipatternsFixme" },
+        hack  = { pattern = "%f[%w]()HACK()%f[%W]", group = "MiniHipatternsHack" },
+        todo  = { pattern = "%f[%w]()TODO()%f[%W]", group = "MiniHipatternsTodo" },
+        note  = { pattern = "%f[%w]()NOTE()%f[%W]", group = "MiniHipatternsNote" }
+    }
+})
+
+vim.keymap.set("n", "<leader>tw", function () require("mini.trailspace").trim() end, {
+    desc = "Trim trailing whitespace"
+})
+
 -- Autopairs
 require("mini.pairs").setup()
 require("mini.ai").setup()
