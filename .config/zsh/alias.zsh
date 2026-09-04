@@ -6,9 +6,11 @@
 #░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░  ░▒▓█▓▒░          ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░         ░▒▓█▓▒░          ░▒▓█▓▒░
 #░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓███████▓▒░       ░▒▓███████▓▒░   ░▒▓█▓▒░           ░▒▓██████▓▒░░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓████████▓▒░▒▓█▓▒░         ░▒▓█▓▒░   ░▒▓███████▓▒░
 
+alias zsource="source ~/.zshrc"
 alias ls="lsd"
 alias cat="bat"
 alias ..="cd .."
+alias ...="cd ../../"
 alias activepy="source .venv/bin/activate"
 alias v="nvim"
 alias py="python3.12"
@@ -19,8 +21,11 @@ alias la='lsd -a --group-dirs=first'
 alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
+alias tree="lsd --tree"
 #alias air='/home/Jakepys/go/bin/air'
 alias b-status='/home/Jakepys/.local/bin/b-status/bumblebee-status'
 alias runserver='python3 -m http.server'
 #alias treegit='git log --all --graph --decorate --oneline'
 #alias rj='~/idea-IC-243.25659.59/bin/idea'
+alias lg="lazygit"
+alias bt="bluetui"
