@@ -29,7 +29,8 @@ local servers_configs = {
     gopls = "plugins.lsps_langs.go_lang_config",
     zls = "plugins.lsps_langs.zig_lang_config",
     ols = "plugins.lsps_langs.odin_lang_config",
-    gleam = "plugins.lsps_langs.gleam_lang_config"
+    gleam = "plugins.lsps_langs.gleam_lang_config",
+    nimlangserver = "plugins.lsps_langs.nim_lang_config"
 }
 
 for name_lsp, module_path in pairs(servers_configs) do

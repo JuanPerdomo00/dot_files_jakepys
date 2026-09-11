@@ -1,4 +1,11 @@
 require("conform").setup({
+    formatters = {
+        nph = {
+            command = "nph",
+            args = { "-" },
+            stdin = true
+        }
+    },
     formatters_by_ft = {
         sh = { "shfmt" },
         bash = { "shfmt" },
@@ -6,6 +13,7 @@ require("conform").setup({
         javascript = { "prettier" },
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
-        typescriptreact = { "prettier" }
+        typescriptreact = { "prettier" },
+        nim = { "nph" }
     }
 })
