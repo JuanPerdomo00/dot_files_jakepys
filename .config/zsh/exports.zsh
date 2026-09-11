@@ -18,5 +18,5 @@ export PATH="$PATH:\
 /home/jakepys/.deno/bin:\
 /home/jakepys/go/bin:\
 /home/jakepys/.cargo/bin:\
-$HOME/.zig_versions"
-
+$HOME/.zig_versions:\
+$HOME/.nimble/bin"
