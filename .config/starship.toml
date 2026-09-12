@@ -1,6 +1,6 @@
 "$schema" = "https://starship.rs/config-schema.json"
 scan_timeout = 100
-command_timeout = 500
+command_timeout = 1000
 follow_symlinks = false
 add_newline = false
 palette = "one_dark"
@@ -20,11 +20,21 @@ $status\
 right_format = """$all"""
 
 
+[custom.nimble]
+# `nimble dump` is a hell.
+# 665ms to view the version of a .nimble project
+command = "grep '^version' *.nimble | head -1 | cut -d '\"' -f2"
+when = "ls *.nimble > /dev/null 2>&1"
+symbol = " "
+format = " [$symbol $output]($style) "
+style = "bold yellow"
+ignore_timeout = true
+
+
 [os]
 disabled = false
 format = "[$symbol]($style) "
 style = "bold blue"
-
 
 
 [directory]
@@ -70,7 +80,7 @@ symbol = ''
 style = 'bold red'
 
 [package]
-disabled = false
+disabled = true
 
 [time]
 disabled = true
@@ -171,6 +181,10 @@ CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
+
+[nim]
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
 
 [nodejs]
 symbol = " "
