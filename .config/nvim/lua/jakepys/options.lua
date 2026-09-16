@@ -1,5 +1,5 @@
 vim.g.netrw_banner = 0
-
+vim.o.showmode = false
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -36,7 +36,7 @@ vim.opt.signcolumn = "yes"
 
 vim.api.nvim_create_autocmd("TextYankPost", {
     desc = "Highlight when yanking (copying) text",
-    callback = function()
+    callback = function ()
         vim.hl.on_yank()
-    end,
+    end
 })
