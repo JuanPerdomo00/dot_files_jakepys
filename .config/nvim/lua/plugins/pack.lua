@@ -21,6 +21,10 @@ vim.pack.add({
     -- Git ------------------------------------------
     "https://github.com/nvim-lua/plenary.nvim",
     "https://github.com/NeogitOrg/neogit",
-    "https://github.com/sindrets/diffview.nvim"
+    "https://github.com/sindrets/diffview.nvim",
     -----------------------------------------------------
+    -- Lualine and nvim navic --------------------------
+    "https://github.com/nvim-lualine/lualine.nvim",
+    "https://github.com/SmiteshP/nvim-navic"
+    ----------------------------------------------------
 })
