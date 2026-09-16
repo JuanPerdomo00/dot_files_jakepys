@@ -32,7 +32,12 @@ require('lualine').setup {
         }
     },
     sections = {
-        lualine_a = { 'mode' },
+        lualine_a = {
+            function ()
+                return "󰣇  " .. os.getenv("USER") 
+            end,
+            'mode'
+        },
         lualine_b = {
             'branch',
             'diff',
