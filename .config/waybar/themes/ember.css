@@ -1,0 +1,85 @@
+/*
+* Ember palette
+*/
+
+/* Base colors */
+@define-color base #1c1b19;
+@define-color mantle #161514;
+@define-color crust #100f0e;
+
+/* Text colors */
+@define-color text #e6dac4;
+@define-color subtext0 #a89b86;
+@define-color subtext1 #c9bda8;
+
+/* Surface colors */
+@define-color surface0 #242320;
+@define-color surface1 #2d2b27;
+@define-color surface2 #37342f;
+
+/* Overlay colors */
+@define-color overlay0 #5c574c;
+@define-color overlay1 #746d5f;
+@define-color overlay2 #8c8372;
+
+/* Accent colors */
+@define-color blue #7890a0;
+/* Steel */
+@define-color lavender #988090;
+/* Mauve (reused) */
+@define-color sapphire #7890a0;
+/* Steel (reused, not referenced directly by style.css) */
+@define-color sky #80a090;
+/* Sage (reused, not referenced directly by style.css) */
+@define-color teal #8a9868;
+/* Olive */
+@define-color green #80a090;
+/* Sage */
+@define-color yellow #c8b468;
+/* Gold */
+@define-color peach #c09058;
+/* Orange */
+@define-color maroon #b07878;
+/* Rose */
+@define-color red #b8524a;
+/* derivado: no hay rojo puro en Ember */
+@define-color mauve #988090;
+/* Mauve */
+@define-color pink #e08060;
+/* Coral — acento hero */
+@define-color flamingo #c09058;
+/* Orange (reused, not referenced directly by style.css) */
+@define-color rosewater #e6dac4;
+/* Ember Light (reused, not referenced directly by style.css) */
+
+/* Additional styling variables */
+@define-color background-primary #1c1b19;
+/* base */
+@define-color background-secondary #242320;
+/* surface0 */
+@define-color background-hover #2d2b27;
+/* surface1 */
+@define-color border-color #746d5f;
+/* overlay1 */
+
+/* Status colors */
+@define-color success @green;
+@define-color warning @yellow;
+@define-color error @red;
+@define-color info @blue;
+
+/* Module-specific background colors */
+@define-color bg-workspaces #242320;
+/* surface0 */
+@define-color bg-clock #e08060;
+/* coral */
+@define-color bg-system #2d2b27;
+/* surface1 */
+@define-color bg-network #2d2b27;
+/* surface1 */
+@define-color bg-audio #2d2b27;
+/* surface1 */
+@define-color bg-launcher #988090;
+/* mauve */
+@define-color bg-power #b07878;
+/* maroon */
