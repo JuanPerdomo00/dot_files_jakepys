@@ -21,17 +21,26 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor 
 vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result cursor centered" })
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result cursor centered" })
 
-vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
-    { desc = "Replace word cursor is on globally" })
+vim.keymap.set(
+    "n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]],
+    { desc = "Replace word cursor is on globally" }
+)
 vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc = "makes file executable" })
 
-
-vim.keymap.set({ "n", "t" }, "<space>tt", function()
+vim.keymap.set({ "n", "t" }, "<space>tt", function ()
     require("jakepys.floatterm").toggle_terminal()
-end, { desc = "Toggle floating terminal" })
+end, { desc = "Toggle floating terminal" }
+)
 
 -- native undotree
-vim.keymap.set("n", "<leader>u", function()
+vim.keymap.set("n", "<leader>u", function ()
     vim.cmd.packadd("nvim.undotree")
     require("undotree").open()
-end, { desc = "Toggle Builtin Undotree" })
+end, { desc = "Toggle Builtin Undotree" }
+)
+
+-- move between buffers without the mouse
+vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>bb", "<C-^>", { desc = "Switch to last buffer" })
+vim.keymap.set("n", "<leader>bd", "<cmd>bdelete<CR>", { desc = "Close current buffer" })
