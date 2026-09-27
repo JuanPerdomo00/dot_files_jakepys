@@ -1,8 +1,47 @@
+local colors = {
+    bg      = '#242320',
+    fg      = '#e6dac4',
+    blue    = '#7890a0',
+    green   = '#80a090',
+    magenta = '#988090',
+    red     = '#b07878',
+    yellow  = '#c8b468',
+    cyan    = '#8a9868'
+}
+
+local ember = {
+    normal = {
+        a = { bg = colors.blue, fg = colors.bg, gui = 'bold' },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg }
+    },
+    insert = {
+        a = { bg = colors.green, fg = colors.bg, gui = 'bold' }
+    },
+    visual = {
+        a = { bg = colors.magenta, fg = colors.bg, gui = 'bold' }
+    },
+    replace = {
+        a = { bg = colors.red, fg = colors.bg, gui = 'bold' }
+    },
+    command = {
+        a = { bg = colors.yellow, fg = colors.bg, gui = 'bold' }
+    },
+    terminal = {
+        a = { bg = colors.cyan, fg = colors.bg, gui = 'bold' }
+    },
+    inactive = {
+        a = { bg = colors.bg, fg = colors.fg, gui = 'bold' },
+        b = { bg = colors.bg, fg = colors.fg },
+        c = { bg = colors.bg, fg = colors.fg }
+    }
+}
+
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = 'horizon',
-        component_separators = { left = '', right = '' },
+        theme = ember,
+        component_separators = { left = '', right = ' ' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {
             statusline = {},
@@ -16,7 +55,7 @@ require('lualine').setup {
             statusline = 1000,
             tabline = 1000,
             winbar = 1000,
-            refresh_time = 16, -- ~60fps
+            refresh_time = 16,
             events = {
                 'WinEnter',
                 'BufEnter',
@@ -34,7 +73,7 @@ require('lualine').setup {
     sections = {
         lualine_a = {
             function ()
-                return "󰣇  " .. os.getenv("USER") 
+                return "󰣇  " .. os.getenv("USER")
             end,
             'mode'
         },
@@ -43,7 +82,7 @@ require('lualine').setup {
             'diff',
             {
                 'diagnostics',
-                symbols = { error = ' ', warn = '  ', info = ' ', hint = ' ' }
+                symbols = { error = '  ', warn = '  ', info = '  ', hint = '  ' }
             }
         },
         lualine_c = { { 'filename', path = 1 } },

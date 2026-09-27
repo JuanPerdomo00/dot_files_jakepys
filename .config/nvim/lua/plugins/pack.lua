@@ -4,6 +4,7 @@ vim.pack.add({
     "https://github.com/rebelot/kanagawa.nvim",
     "https://github.com/rockerBOO/boo-colorscheme-nvim",
     "https://github.com/srcery-colors/srcery-vim",
+    "https://github.com/ember-theme/nvim",
     -----------------------------------------------------
     "https://github.com/nvim-mini/mini.nvim",
     "https://github.com/rafamadriz/friendly-snippets",

@@ -5,4 +5,4 @@ vim.g.maplocalleader = " "
 require("plugins")
 require("jakepys")
 
-vim.cmd.colorscheme("srcery")
+vim.cmd.colorscheme("ember")
