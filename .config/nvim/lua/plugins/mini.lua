@@ -9,7 +9,7 @@ MiniFiles.setup({
     }
 })
 
-vim.keymap.set("n", "<Leader>e", function ()
+vim.keymap.set("n", "<Leader>1", function ()
     MiniFiles.open()
 end, { desc = "Toggle mini file explorer" }
 )
@@ -18,6 +18,11 @@ vim.keymap.set("n", "<leader>-", function ()
     MiniFiles.open(vim.api.nvim_buf_get_name(0), false)
     MiniFiles.reveal_cwd()
 end, { desc = "Toggle into currently opened file" }
+)
+
+vim.keymap.set("n", "<leader>fb", function ()
+    require("mini.pick").builtin.buffers()
+end, { desc = "Fuzzy-find and jump between buffers (MiniPick)" }
 )
 
 ---- mini notify ----
