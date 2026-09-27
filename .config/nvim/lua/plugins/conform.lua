@@ -4,6 +4,9 @@ require("conform").setup({
             command = "nph",
             args = { "-" },
             stdin = true
+        },
+        schemat = {
+            command = "schemat"
         }
     },
     formatters_by_ft = {
@@ -14,6 +17,7 @@ require("conform").setup({
         javascriptreact = { "prettier" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
-        nim = { "nph" }
+        nim = { "nph" },
+        scheme = { "schemat" }
     }
 })
