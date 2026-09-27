@@ -25,6 +25,12 @@ vim.pack.add({
     -----------------------------------------------------
     -- Lualine and nvim navic --------------------------
     "https://github.com/nvim-lualine/lualine.nvim",
-    "https://github.com/SmiteshP/nvim-navic"
+    "https://github.com/SmiteshP/nvim-navic",
+    ----------------------------------------------------
+
+    -- Scheme ------------------------------------------
+    "https://github.com/julienvincent/nvim-paredit",
+    "https://github.com/Olical/conjure",
+    "https://github.com/hiphish/rainbow-delimiters.nvim"
     ----------------------------------------------------
 })
