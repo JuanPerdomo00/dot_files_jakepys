@@ -49,7 +49,13 @@
     "center": [
         {
             "type": "focused",
-            "icon_size": 16
+            "icon_size": 25,
+            "truncate": {
+                "length": 15,
+                "max_length": 20,
+                "mode": "middle"
+            },
+            "show_title": true
         }
     ],
     "end": [
