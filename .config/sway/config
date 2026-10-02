@@ -8,19 +8,21 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term ghostty
+set $term kitty
 # Your preferred application launcher
 set $menu rofi -show drun
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/.config/wallpapers/suguru.jpg fill
+#output * bg ~/.config/wallpapers/suguru.jpg fill
 #
 # Example configuration:
 output HDMI-A-1 pos 0 0 res 1920x1080@60Hz
 output eDP-1 pos 0 0 res 1366x768@60Hz
 
+bindswitch --reload --locked lid:on output eDP-1 disable
+bindswitch --reload --locked lid:off output eDP-1 enable
 # You can get the names of your outputs by running: swaymsg -t get_outputs
 bindsym $mod+Shift+m exec ~/.config/sway/scripts/monitors.sh
 
@@ -31,6 +33,10 @@ exec swayidle -w \
     timeout 700 'swaymsg "output * dpms off"' \
     resume 'swaymsg "output * dpms on"' \
     before-sleep 'swaylock -f -c 000000' &
+
+exec awww-daemon
+exec /home/jakepys/dot_files_jakepys/.config/sway/scripts/change_wallpapers.py
+
 
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -48,7 +54,7 @@ exec swayidle -w \
 #   }
 #
 input type:keyboard {
-	xkb_layout "us,es",
+	xkb_layout "es",
 	xkb_options "grp:win_space_toggle"
 }
 #
@@ -68,7 +74,7 @@ input type:keyboard {
     # Start your launcher
 		bindsym $mod+a exec $menu
 		# Screenshot 
-		bindsym $mod+Shift+f exec flameshot gui
+		bindsym $mod+Shift+f exec grim -g "$(slurp -b 1c1b1980 -c e08060ff -s e0806033)" - | wl-copy && notify-send "Copy in clip"
 		
 		#Swaylock 
 		bindsym $mod+Shift+b exec swaylock
@@ -210,12 +216,37 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
 bar {
-    swaybar_command waybar
+    swaybar_command ironbar
 }
+
+default_border pixel 5
+smart_borders on
+
+set $bg       #1c1b19
+set $bg_soft  #242320
+set $fg       #e6dac4
+set $coral    #e08060
+set $orange   #c09058
+set $gold     #c8b468
+set $olive    #8a9868
+set $sage     #80a090
+set $steel    #7890a0
+set $rose     #b07878
+set $mauve    #988090
+set $muted    #3a3834
+
+
+# class                 borde    fondo      texto  indicador  borde-hijo
+client.focused          $coral   $bg        $fg    $coral     $coral
+client.focused_inactive $muted   $bg_soft   $fg    $muted     $muted
+client.unfocused        $muted   $bg        $mauve $muted     $muted
+client.urgent           $rose    $bg        $fg    $rose      $rose
+client.placeholder      $muted   $bg        $fg    $muted     $muted
+client.background       $bg
+
+gaps inner 4
+gaps outer 7
+smart_gaps on
 
 include /etc/sway/config.d/*
