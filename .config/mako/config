@@ -1,6 +1,6 @@
 font=Iosevka Nerd Font 10
-background-color=#1e1e2eee
-text-color=#cdd6f4
+background-color=#1c1b19ee
+text-color=#e6dac4
 width=350
 height=120
 margin=15
@@ -24,14 +24,14 @@ on-button-left=dismiss
 on-button-right=dismiss-all
 
 [urgency=low]
-border-color=#6c7086
-background-color=#1e1e2e99
+border-color=#3a3834
+background-color=#1c1b1999
 default-timeout=3000
 
 [urgency=normal]
-border-color=#89b4fa
+border-color=#e08060
 
 [urgency=high]
-border-color=#f38ba8
-background-color=#1e1e2eff
+border-color=#b07878
+background-color=#1c1b19ff
 default-timeout=0
