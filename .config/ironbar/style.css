@@ -1,0 +1,168 @@
+:root {
+    --bg: #1c1b19;
+    --bg-soft: #242320;
+    --fg: #d8cfc0;
+    --coral: #e08060;
+    --orange: #c09058;
+    --gold: #c8b468;
+    --olive: #8a9868;
+    --sage: #80a090;
+    --steel: #7890a0;
+    --rose: #b07878;
+    --mauve: #988090;
+    --muted: #4a4741;
+
+    --margin-lg: 1em;
+    --margin-sm: 0.5em;
+}
+
+* {
+    border-radius: 1%;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    font-family: "Iosevka Nerd Font Mono Bold";
+}
+
+scale>trough {
+    background-color: var(--bg-soft);
+}
+
+scale>trough>highlight {
+    background-color: var(--coral);
+    border-style: solid;
+    border-color: var(--coral);
+    border-width: 0.2em;
+}
+
+scale>trough>slider {
+    background-color: var(--fg);
+}
+
+switch>slider {
+    background-color: var(--fg);
+}
+
+switch:checked {
+    background-color: var(--coral);
+}
+
+switch:not(:checked) {
+    background-color: var(--bg-soft);
+}
+
+#bar,
+popover,
+popover contents,
+calendar,
+popover .view {
+    background-color: var(--bg);
+}
+
+box,
+button,
+label {
+    background-color: #0000;
+    color: var(--fg);
+}
+
+button {
+    padding-left: var(--margin-sm);
+    padding-right: var(--margin-sm);
+}
+
+button:hover,
+button:active,
+*:selected {
+    background-color: var(--bg-soft);
+}
+
+#end>*+* {
+    margin-left: var(--margin-lg);
+}
+
+.sysinfo>*+* {
+    margin-left: var(--margin-sm);
+}
+
+.workspaces .item label {
+    color: var(--mauve);
+}
+
+.workspaces .item.visible {
+    box-shadow: inset 0 -1px var(--fg);
+}
+
+.workspaces .item.focused {
+    box-shadow: inset 0 -1px var(--coral);
+    background-color: var(--bg-soft);
+}
+
+.workspaces .item.focused label {
+    color: var(--coral);
+}
+
+.workspaces .item.urgent {
+    background-color: var(--rose);
+}
+
+.workspaces .item.urgent label {
+    color: var(--bg);
+}
+
+.battery label {
+    color: var(--olive);
+}
+
+.battery.warning label {
+    color: var(--gold);
+}
+
+.battery.critical label {
+    color: var(--rose);
+}
+
+.sysinfo label {
+    color: var(--steel);
+}
+
+.volume label {
+    color: var(--orange);
+}
+
+.network-manager label {
+    color: var(--sage);
+}
+
+.clock {
+    font-weight: bold;
+}
+
+.clock label {
+    color: var(--gold);
+}
+
+.notifications label {
+    color: var(--coral);
+}
+
+.popup-clock .calendar-clock {
+    font-size: 2.0em;
+}
+
+.popup-clock .calendar .today {
+    background-color: var(--coral);
+}
+
+.popup-clock .calendar .today label {
+    color: var(--bg);
+}
+
+.sep,
+.sep label {
+    color: var(--muted);
+}
+
+#start>*+* {
+    margin-left: var(--margin-lg);
+}
