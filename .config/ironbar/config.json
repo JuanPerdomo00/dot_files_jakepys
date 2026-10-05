@@ -65,13 +65,22 @@
             "class": "sep"
         },
         {
+            "type": "sys_info",
             "format": [
-                " {cpu_percent}% {temp_c@CPUTIN}°C",
+                " {cpu_percent}%"
+            ],
+            "interval": {
+                "cpu": 1,
+                "temps": 5
+            },
+            "tooltip": "{{2000:python3 /home/jakepys/.config/ironbar/scripts/procncpu.py}}"
+        },
+        {
+            "format": [
                 " {memory_used} / {memory_total} GB",
                 "󰋊 {disk_total#T@/:.1} TB ({disk_percent@/}%)"
             ],
             "interval": {
-                "cpu": 1,
                 "disks": 300,
                 "memory": 30,
                 "temps": 5
