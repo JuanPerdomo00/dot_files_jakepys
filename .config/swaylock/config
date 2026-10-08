@@ -1,19 +1,17 @@
-# Si tienes wallpaper
-image=$HOME/.config/wallpapers/arch_purple.jpg
+image=$HOME/.config/wallpapers/hypr_wall/angel_debil.png
 scaling=fill
 
-color=282a36cc
-
-ring-color=6272a4ff
-ring-ver-color=50fa7bff
-ring-wrong-color=ff5555ff
-
-inside-color=282a3699
-text-color=f8f8f2ff
-
-bs-hl-color=ff79c6ff
-key-hl-color=bd93f9ff
-
+color=1c1b19cc
+ring-color=7890a0ff
+ring-ver-color=8a9868ff
+ring-wrong-color=b07878ff
+ring-clear-color=988090ff
+ring-caps-lock-color=c09058ff
+inside-color=1c1b1999
+text-color=e6dac4ff
+text-ver-color=80a090ff
+bs-hl-color=c8b468ff
+key-hl-color=e08060ff
 effect-blur=7x5
 indicator
 indicator-radius=120
