@@ -18,6 +18,8 @@ require("conform").setup({
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         nim = { "nph" },
-        scheme = { "schemat" }
+        scheme = { "schemat" },
+        ocaml = { "ocamlformat" },
+        ocaml_interface = { "ocamlformat" }
     }
 })
