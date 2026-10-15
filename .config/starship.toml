@@ -219,7 +219,11 @@ symbol = ""
 format = "[ $symbol( $version) ]($style)"
 
 [haskell]
-symbol = ""
+symbol = " "
+format = "[ $symbol( $version) ]($style)"
+
+[ocaml]
+symbol = " "
 format = "[ $symbol( $version) ]($style)"
 
 [python]
