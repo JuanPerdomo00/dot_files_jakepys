@@ -31,7 +31,9 @@ local servers_configs = {
     ols = "plugins.lsps_langs.odin_lang_config",
     gleam = "plugins.lsps_langs.gleam_lang_config",
     nimlangserver = "plugins.lsps_langs.nim_lang_config",
-    guile_lsp = "plugins.lsps_langs.scheme_lang_config"
+    guile_lsp = "plugins.lsps_langs.scheme_lang_config",
+    julials = "plugins.lsps_langs.julia_lang_config",
+    ocamllsp = "plugins.lsps_langs.ocaml_lang_config"
 }
 
 for name_lsp, module_path in pairs(servers_configs) do
