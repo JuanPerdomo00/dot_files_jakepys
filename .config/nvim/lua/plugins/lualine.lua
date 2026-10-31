@@ -1,15 +1,15 @@
 local colors = {
-    bg      = '#242320',
-    fg      = '#e6dac4',
-    blue    = '#7890a0',
-    green   = '#80a090',
-    magenta = '#988090',
-    red     = '#b07878',
-    yellow  = '#c8b468',
-    cyan    = '#8a9868'
+    bg      = '#1a1236',
+    fg      = '#e8d8ff',
+    blue    = '#8a97ff',
+    green   = '#a8f0a0',
+    magenta = '#c04df0',
+    red     = '#e5384f',
+    yellow  = '#ffc857',
+    cyan    = '#8ff0d8'
 }
 
-local ember = {
+local vaporwave = {
     normal = {
         a = { bg = colors.blue, fg = colors.bg, gui = 'bold' },
         b = { bg = colors.bg, fg = colors.fg },
@@ -40,7 +40,7 @@ local ember = {
 require('lualine').setup {
     options = {
         icons_enabled = true,
-        theme = ember,
+        theme = vaporwave,
         component_separators = { left = '', right = ' ' },
         section_separators = { left = '', right = '' },
         disabled_filetypes = {

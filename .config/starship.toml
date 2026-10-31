@@ -3,7 +3,7 @@ scan_timeout = 100
 command_timeout = 1000
 follow_symlinks = false
 add_newline = false
-palette = "one_dark"
+palette = "vaporwave"
 
 format = """
 $os\
@@ -407,3 +407,38 @@ sky = "#56B6C2"
 sapphire = "#61AFEF" # dir fg
 blue = "#61AFEF"
 lavender = "#61AFEF"   # git branch fg
+
+[palettes.vaporwave]
+# --- background ---
+crust = "#0b0618"
+mantle = "#120a24"
+base = "#1a1236"      # git branch bg
+
+surface0 = "#2d2260"
+surface1 = "#3a2a70"
+surface2 = "#4a2c82"
+
+overlay0 = "#6e5aa8"
+overlay1 = "#8a76bf"
+overlay2 = "#9a84c9"
+
+# --- text ---
+text = "#e8d8ff"
+subtext1 = "#cdbcf0"
+subtext0 = "#b3a0dc"
+
+# --- accents ---
+rosewater = "#ffd6f0"
+flamingo = "#ff9ab0"
+pink = "#ff6ec7"
+mauve = "#c04df0"
+red = "#e5384f"
+maroon = "#ff5c7a"
+peach = "#ff8a30"
+yellow = "#ffc857"
+green = "#a8f0a0"
+teal = "#8ff0d8"
+sky = "#b4f8ea"
+sapphire = "#6a5cf0"
+blue = "#8a97ff"
+lavender = "#c4a8ff"  # git branch fg

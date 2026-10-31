@@ -74,7 +74,7 @@ input type:keyboard {
     # Start your launcher
 		bindsym $mod+a exec $menu
 		# Screenshot 
-		bindsym $mod+Shift+f exec grim -g "$(slurp -b 1c1b1980 -c e08060ff -s e0806033)" - | wl-copy && notify-send "Copy in clip"
+		bindsym $mod+Shift+f exec grim -g "$(slurp -b 120a2480 -c c04df0ff -s c04df033)" - | wl-copy && notify-send "Copy in clip"
 		
 		#Swaylock 
 		bindsym $mod+Shift+b exec swaylock
@@ -223,26 +223,24 @@ bar {
 default_border pixel 5
 smart_borders on
 
-set $bg       #1c1b19
-set $bg_soft  #242320
-set $fg       #e6dac4
-set $coral    #e08060
-set $orange   #c09058
-set $gold     #c8b468
-set $olive    #8a9868
-set $sage     #80a090
-set $steel    #7890a0
-set $rose     #b07878
-set $mauve    #988090
-set $muted    #3a3834
+set $bg        #120a24
+set $bg_soft   #1a1236
+set $fg        #e8d8ff
+set $accent    #c04df0
+set $pink      #ff6ec7
+set $peach     #ff8a30
+set $red       #e5384f
+set $dim       #9a84c9
+set $muted     #2d2260
+set $inactive  #4a2c82
 
 
-# class                 borde    fondo      texto  indicador  borde-hijo
-client.focused          $coral   $bg        $fg    $coral     $coral
-client.focused_inactive $muted   $bg_soft   $fg    $muted     $muted
-client.unfocused        $muted   $bg        $mauve $muted     $muted
-client.urgent           $rose    $bg        $fg    $rose      $rose
-client.placeholder      $muted   $bg        $fg    $muted     $muted
+# class                 borde      fondo      texto  indicador  borde-hijo
+client.focused          $accent    $bg        $fg    $pink      $accent
+client.focused_inactive $inactive  $bg_soft   $dim   $inactive  $inactive
+client.unfocused        $muted     $bg        $dim   $muted     $muted
+client.urgent           $peach     $red       $fg    $peach     $peach
+client.placeholder      $muted     $bg        $fg    $muted     $muted
 client.background       $bg
 
 gaps inner 4

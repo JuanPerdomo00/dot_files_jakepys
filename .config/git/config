@@ -5,8 +5,8 @@
 	editor = nvim
 	autocrlf = input
 	compression = 9
-	whietespace = error
-	preloadindex = true
+    preloadindex = true
+    pager = delta
 [init]
 	defaultBranch = dev
 
@@ -34,4 +34,31 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-	required = true
+    required = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    line-numbers = true
+    syntax-theme = vaporwave
+
+    plus-style = syntax "#1e3a2f"
+    plus-emph-style = syntax "#2f6b4a"
+    minus-style = syntax "#3d1530"
+    minus-emph-style = syntax "#7a1f45"
+    zero-style = syntax
+
+    file-style = bold "#ff6ec7"
+    file-decoration-style = "#4a2c82" ul
+    hunk-header-style = file line-number syntax
+    hunk-header-decoration-style = "#4a2c82" box
+    hunk-header-file-style = "#c04df0"
+    hunk-header-line-number-style = "#ffc857"
+
+    line-numbers-left-style = "#4a2c82"
+    line-numbers-right-style = "#4a2c82"
+    line-numbers-minus-style = "#e5384f"
+    line-numbers-plus-style = "#a8f0a0"
+    line-numbers-zero-style = "#6e5aa8"

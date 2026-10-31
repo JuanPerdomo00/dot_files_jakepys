@@ -20,6 +20,7 @@ require("conform").setup({
         nim = { "nph" },
         scheme = { "schemat" },
         ocaml = { "ocamlformat" },
-        ocaml_interface = { "ocamlformat" }
+        ocaml_interface = { "ocamlformat" },
+        d = { "dfmt" }
     }
 })

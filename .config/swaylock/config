@@ -1,20 +1,19 @@
-image=$HOME/.config/wallpapers/hypr_wall/angel_debil.png
+image=$HOME/.config/wallpapers/hypr_wall/yofukashi.png
 scaling=fill
 
-color=1c1b19cc
-ring-color=7890a0ff
-ring-ver-color=8a9868ff
-ring-wrong-color=b07878ff
-ring-clear-color=988090ff
-ring-caps-lock-color=c09058ff
-inside-color=1c1b1999
-text-color=e6dac4ff
-text-ver-color=80a090ff
-bs-hl-color=c8b468ff
-key-hl-color=e08060ff
+color=120a24cc
+ring-color=8a97ffff
+ring-ver-color=a8f0a0ff
+ring-wrong-color=ff5c7aff
+ring-clear-color=9a84c9ff
+ring-caps-lock-color=ff8a30ff
+inside-color=120a2499
+text-color=e8d8ffff
+text-ver-color=8ff0d8ff
+bs-hl-color=ffc857ff
+key-hl-color=c04df0ff
 effect-blur=7x5
 indicator
 indicator-radius=120
 indicator-thickness=12
 
-font="Iosevka Nerd Font"

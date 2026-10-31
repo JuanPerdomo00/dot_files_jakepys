@@ -1,16 +1,16 @@
 :root {
-    --bg: #1c1b19;
-    --bg-soft: #242320;
-    --fg: #d8cfc0;
-    --coral: #e08060;
-    --orange: #c09058;
-    --gold: #c8b468;
-    --olive: #8a9868;
-    --sage: #80a090;
-    --steel: #7890a0;
-    --rose: #b07878;
-    --mauve: #988090;
-    --muted: #4a4741;
+    --bg: #120a24;
+    --bg-soft: #1a1236;
+    --fg: #e8d8ff;
+    --coral: #c04df0;
+    --orange: #ff8a30;
+    --gold: #ffc857;
+    --olive: #a8f0a0;
+    --sage: #8ff0d8;
+    --steel: #8a97ff;
+    --rose: #ff5c7a;
+    --mauve: #9a84c9;
+    --muted: #4a2c82;
 
     --margin-lg: 1em;
     --margin-sm: 0.5em;

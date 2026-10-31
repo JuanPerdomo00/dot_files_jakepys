@@ -1,6 +1,7 @@
 #!/bin/bash
 
 bars=("▁" "▂" "▃" "▄" "▅" "▆" "▇" "█")
+colors=("#39a0ff" "#36c5f0" "#32e0d0" "#45e878" "#b5ed50" "#ffe066" "#ffad42" "#ff5c7a")
 
 cava -p <(
     cat <<'EOF'
@@ -25,7 +26,7 @@ EOF
 
     for value in "${values[@]}"; do
         [[ "$value" =~ ^[0-7]$ ]] || continue
-        output+="${bars[$value]}"
+        output+="<span foreground='${colors[$value]}'>${bars[$value]}</span>"
     done
 
     printf '%s\n' "$output"

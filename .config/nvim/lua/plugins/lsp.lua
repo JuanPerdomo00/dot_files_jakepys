@@ -33,7 +33,8 @@ local servers_configs = {
     nimlangserver = "plugins.lsps_langs.nim_lang_config",
     guile_lsp = "plugins.lsps_langs.scheme_lang_config",
     julials = "plugins.lsps_langs.julia_lang_config",
-    ocamllsp = "plugins.lsps_langs.ocaml_lang_config"
+    ocamllsp = "plugins.lsps_langs.ocaml_lang_config",
+    serve_d = "plugins.lsps_langs.d_lang_config"
 }
 
 for name_lsp, module_path in pairs(servers_configs) do
